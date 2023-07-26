@@ -66,9 +66,9 @@ export const ProjectContainer = ({
 				className={`${imageHeight} ${box2Width}  relative overflow-hidden img-wrapper`}
 			>
 				<img
-					src={image}
+					src={''}
 					alt="project cover"
-					className="absolute w-full object-cover h-full img bg-[#240658]/10"
+					className="absolute w-full object-cover h-full img bg-[#240658]/5"
 				/>
 				<div className="img-container absolute top-0 right-0 w-full h-full"></div>
 			</div>
