@@ -153,7 +153,7 @@ export const Projects = () => {
 				/>
 
 				<ProjectContainer
-					image={church}
+					image={'https://api.pikwy.com/web/64c17694d4ef802a3449a35c.jpg'}
 					title="Church Blog"
 					description="Played a volunteered role in enhancing my church's branding and advertising efforts by developing a modern and visually appealing web app."
 					githubLink="https://github.com/numofran6/church-website"
