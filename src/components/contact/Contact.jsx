@@ -83,10 +83,11 @@ export const Contact = () => {
 					</div>
 
 					<div className="flex items-center space-x-2">
-						<h6 className="font-bold text-lg font-Glimer-Bold">
-							+233 50 238 5080
-						</h6>
 						<img src={phone} alt="" className="sm:h-16 sm:w-16 h-5 w-5" />
+						<div className="font-bold text-lg font-Glimer-Bold">
+							<h1>Phone:</h1>
+							<h6>+233 50 238 5080</h6>
+						</div>
 					</div>
 				</div>
 
