@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.max-w-container {
+	@apply max-w-[70rem] mx-auto px-7 lg:px-0;
+}
+
+.btn-primary {
+	@apply rounded-full w-fit text-[#420fe7] hover:bg-[#240658] hover:text-[#fcfcfc] 
+	transition duration-500 ease-in-out font-Glimer-Bold font-medium 
+	border-[1px] focus:outline-none flex items-center justify-center 
+	border-[#420fe7]/50 py-3 px-6 text-lg xl:text-xl 2xl:text-2xl my-10;
+}
+
+.icon-container {
+	@apply rounded-full 2xl:h-[5rem] 2xl:w-[5rem] xl:h-[4.6rem] xl:w-[4.6rem] lg:h-[4.2rem] lg:w-[4.2rem] md:h-[3.8rem] md:w-[3.8rem] vvs:h-[3.4rem] vvs:w-[3.4rem] h-[2.5rem] w-[2.5rem] bg-[#ffffff]/90 flex justify-center hover:border-[#420fe7] items-center border-8 border-[#420fe7]/20  transition duration-500 ease-in-out;
+}
+
+.project-icon {
+	@apply w-10 h-10;
+}
+
+.contact-icon {
+	@apply h-7 w-7;
+}
+
+.section-title {
+	@apply text-[#420fe7] font-Glimer-Outlined font-semibold z-40 text-4xl md:text-6xl lg:text-8xl;
+}
+
+.footer-link {
+	@apply hover:text-[#420fe7] transition duration-500 ease-in-out;
+}
+
+@font-face {
+	font-family: 'Glimer-Outlined';
+	src: url(./assets/Gilmer-Font/Gilmer\ Outline.otf);
+}
+
+@font-face {
+	font-family: 'Glimer-Bold';
+	src: url(./assets/Gilmer-Font/Gilmer\ Bold.woff);
+}
+
+@font-face {
+	font-family: 'Glimer-Heavy';
+	src: url(./assets/Gilmer-Font/Gilmer\ Heavy.otf);
+}
+
+@font-face {
+	font-family: 'Glimer-Light';
+	src: url(./assets/Gilmer-Font/Gilmer\ Light.otf);
+}
+
+@font-face {
+	font-family: 'Glimer-Medium';
+	src: url(./assets/Gilmer-Font/Gilmer\ Medium.otf);
+}
+
+@font-face {
+	font-family: 'Glimer-Regular';
+	src: url(./assets/Gilmer-Font/Gilmer\ Regular.otf);
+}
+
+@layer base {
+	html,
+	body {
+		background-color: #fcfcfc;
+		color: #3f4145;
+		font-family: 'Glimer-Light', sans-serif;
+	}
+
+	.img {
+		will-change: scale;
+	}
+
+	.img-container {
+		will-change: width;
+	}
+
+	.container {
+		will-change: visibility;
+	}
+
+	.cursor {
+		pointer-events: none;
+	}
+
+	.cursor__ball {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+	}
+
+	.img-container::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		background: #fcfcfc;
+	}
+}

@@ -1,0 +1,131 @@
+import { useEffect } from 'react';
+import gsap from 'gsap';
+import { BsFileEarmarkPdf } from 'react-icons/bs';
+import resume from '../../assets/file/resume.pdf';
+import { github, gmail, linkedin, phone } from '../../assets/images/images';
+
+export const Contact = () => {
+	useEffect(() => {
+		const textContainer = document.querySelector('.text');
+		const heading = textContainer.children[0];
+		const contentP = textContainer.children[1];
+		const contentBtn = textContainer.children[2];
+
+		gsap.delayedCall(1, () => {
+			const tl = gsap
+				.timeline({
+					scrollTrigger: {
+						trigger: '#contact-section',
+						start: 'top 10%',
+						end: 'top top',
+						toggleActions: 'play none resume pause',
+					},
+				})
+				.from(heading, {
+					duration: 1.2,
+					x: -100,
+					opacity: 0,
+					ease: 'power2.out',
+				})
+				.from(
+					contentP,
+					{
+						duration: 1.2,
+						y: 20,
+						opacity: 0,
+						ease: 'power2.out',
+					},
+
+					0.4
+				)
+				.from(
+					contentBtn,
+					{
+						duration: 1.2,
+						opacity: 0,
+						y: 20,
+						ease: 'power2.out',
+					},
+					0.8
+				);
+		});
+	});
+
+	return (
+		<div
+			id="contact-section"
+			className="min-h-screen w-full py-10 flex flex-col justify-between max-w-container"
+		>
+			<div className="text space-y-12">
+				<h1 className="section-title">
+					Reach Out.<span className="block">Let's Get In Touch !</span>
+				</h1>
+
+				<div className="flex items-center justify-between">
+					<div className="flex items-center space-x-4">
+						<a href="numofran6@gmail.com">
+							<div className="icon-container">
+								<img src={gmail} alt="" className="sm:h-8 sm:w-8 h-5 w-5" />
+							</div>
+						</a>
+
+						<a href="https://linkedin.com/in/numofrancis">
+							<div className="icon-container">
+								<img src={linkedin} alt="" className="sm:h-8 sm:w-8 h-5 w-5" />
+							</div>
+						</a>
+
+						<a href="https://github.com/numofran6">
+							<div className="icon-container">
+								<img src={github} alt="" className="sm:h-8 sm:w-8 h-5 w-5" />
+							</div>
+						</a>
+					</div>
+
+					<div className="flex items-center space-x-2">
+						<h6 className="font-bold text-lg font-Glimer-Bold">
+							+233 50 238 5080
+						</h6>
+						<img src={phone} alt="" className="sm:h-16 sm:w-16 h-5 w-5" />
+					</div>
+				</div>
+
+				<div className="flex">
+					<a href={resume} download={resume}>
+						<button id="download-btn" className="btn-primary">
+							<BsFileEarmarkPdf className="mr-2" /> Download Resume
+						</button>
+					</a>
+				</div>
+			</div>
+
+			<footer>
+				<div className="flex flex-col justify-center h-full  max-w-container">
+					<div className="flex items-center justify-between">
+						<p className="font-Glimer-Bold text-lg">
+							Copyright © 2023. All rights are reserved
+						</p>
+
+						<div className="flex items-center space-x-5">
+							<a smooth href="/#home" className="footer-link">
+								Home
+							</a>
+
+							<a smooth href="/#about-me" className="footer-link">
+								About Me
+							</a>
+
+							<a smooth href="/#my-projects" className="footer-link">
+								Projects
+							</a>
+
+							<a smooth href="/#contact-me" className="footer-link">
+								Contact Me
+							</a>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	);
+};
