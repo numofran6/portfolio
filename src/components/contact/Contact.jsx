@@ -21,7 +21,7 @@ export const Contact = () => {
 				.timeline({
 					scrollTrigger: {
 						trigger: '#contact-me',
-						start: 'top 10%',
+						start: 'top 65%',
 						end: 'top top',
 						toggleActions: 'play none resume pause',
 					},

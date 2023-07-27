@@ -17,19 +17,21 @@ export const About = () => {
 
 	return (
 		<header className="max-w-container" id="about-me">
-			<nav className="fixed inset-x-0 bg-[#fcfcfc] flex justify-end items-center space-x-10 h-[4rem] z-50 max-w-container text-[#240658]">
-				<a href="/#about-me" className="nav-link">
-					<AiFillHome className="w-6 h-6 md:hidden" />
-					<p className="hidden md:block font-Glimer-Heavy">About</p>
-				</a>
-				<a href="/#my-projects" className="nav-link">
-					<GiBriefcase className="w-7 h-7 md:hidden" />
-					<p className="hidden md:block font-Glimer-Heavy">Projects</p>
-				</a>
-				<a href="/#contact-me" className="nav-link">
-					<SiGooglemessages className="w-6 h-6 md:hidden" />
-					<p className="hidden md:block font-Glimer-Heavy">Contact Me</p>
-				</a>
+			<nav className="fixed inset-x-0 bg-gradient-to-r from-purple-50 to-purple-50 z-50">
+				<div className=" flex justify-end items-center space-x-10 h-[4rem] max-w-container text-[#240658]">
+					<a href="/#about-me" className="nav-link">
+						<AiFillHome className="w-6 h-6 md:hidden" />
+						<p className="hidden md:block font-Glimer-Heavy">About</p>
+					</a>
+					<a href="/#my-projects" className="nav-link">
+						<GiBriefcase className="w-7 h-7 md:hidden" />
+						<p className="hidden md:block font-Glimer-Heavy">Projects</p>
+					</a>
+					<a href="/#contact-me" className="nav-link">
+						<SiGooglemessages className="w-6 h-6 md:hidden" />
+						<p className="hidden md:block font-Glimer-Heavy">Contact Me</p>
+					</a>
+				</div>
 			</nav>
 
 			<div className="lg:grid lg:grid-cols-2 lg:gap-10 min-h-screen pt-[5.8rem] pb-10">

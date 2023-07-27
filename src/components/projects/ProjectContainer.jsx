@@ -14,7 +14,7 @@ export const ProjectContainer = ({
 }) => {
 	return (
 		<div
-			className={`container gap-10 flex flex-col md:flex-row ${
+			className={`container gap-10 flex flex-col-reverse md:flex-row ${
 				reverse && 'md:flex-row-reverse'
 			}`}
 		>
