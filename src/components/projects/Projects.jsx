@@ -125,12 +125,12 @@ export const Projects = () => {
 
 	return (
 		<div className="w-full pt-[4rem] max-w-container" id="my-projects">
-			<h1 id="project-heading" className="section-title">
+			<h1 id="project-heading" className="section-title mb-5 md:mb-0">
 				<span className="block">Featured</span>
 				<span className="block">Projects</span>
 			</h1>
 
-			<div className="space-y-32 z-30">
+			<div className="space-y-20 md:space-y-32 z-30">
 				<ProjectContainer
 					image={tourbuddy}
 					title="Tour Buddy"
@@ -148,8 +148,8 @@ export const Projects = () => {
 					liveSiteLink="https://greenshopping.vercel.app/"
 					reverse={true}
 					stack={projectStack.greenShop}
-					box1Width="w-1/3"
-					box2Width="w-2/3"
+					box1Width="md:w-1/3"
+					box2Width="md:w-2/3"
 				/>
 
 				<ProjectContainer
@@ -159,8 +159,8 @@ export const Projects = () => {
 					githubLink="https://github.com/numofran6/church-website"
 					liveSiteLink="https://glorioushill.vercel.app/"
 					stack={projectStack.church}
-					box1Width="w-1/2"
-					box2Width="w-1/2"
+					box1Width="md:w-1/2"
+					box2Width="md:w-1/2"
 				/>
 
 				<ProjectContainer

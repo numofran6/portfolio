@@ -59,14 +59,14 @@ export const Contact = () => {
 	return (
 		<div
 			id="contact-me"
-			className="min-h-screen w-full pt-[4rem] pb-10 flex flex-col justify-between max-w-container"
+			className="min-h-screen w-full pt-20 pb-10 flex flex-col justify-between max-w-container"
 		>
-			<div className="text space-y-12">
+			<div className="text space-y-7 md:space-y-12">
 				<h1 className="section-title">
 					Reach Out.<span className="block">Let's Get In Touch !</span>
 				</h1>
 
-				<div className="flex items-center justify-between">
+				<div className="flex flex-col space-y-5 md:space-y-0 md:flex-row md:items-center md:justify-between">
 					<div className="flex items-center space-x-4">
 						<a href={gmailLink} target="_blank" rel="noreferrer">
 							<div className="icon-container">
@@ -96,7 +96,7 @@ export const Contact = () => {
 					</div>
 
 					<div className="flex items-center space-x-2">
-						<img src={phone} alt="" className="sm:h-16 sm:w-16 h-5 w-5" />
+						<img src={phone} alt="" className="h-16 w-16" />
 						<div className="font-bold text-lg font-Glimer-Bold">
 							<h1>Phone:</h1>
 							<h6>+233 50 238 5080</h6>
@@ -114,13 +114,13 @@ export const Contact = () => {
 			</div>
 
 			<footer>
-				<div className="flex flex-col justify-center h-full  max-w-container">
-					<div className="flex items-center justify-between">
-						<p className="font-Glimer-Bold text-lg">
+				<div className="flex flex-col justify-center max-w-container text-center">
+					<div className="flex flex-col-reverse md:flex-row items-center md:justify-between">
+						<p className="font-Glimer-Bold text-xs md:text-lg">
 							Copyright © 2023. All rights are reserved
 						</p>
 
-						<div className="flex items-center space-x-5">
+						<div className="flex text-sm items-center space-x-5 mb-5 md:mb-0">
 							<a href="/#about-me" className="footer-link">
 								About Me
 							</a>

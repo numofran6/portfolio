@@ -17,19 +17,22 @@ export const About = () => {
 
 	return (
 		<header className="max-w-container" id="about-me">
-			<nav className="fixed inset-x-0 bg-[#fcfcfc] flex justify-end items-center space-x-10 h-[4rem] z-50 max-w-container">
+			<nav className="fixed inset-x-0 bg-[#fcfcfc] flex justify-end items-center space-x-10 h-[4rem] z-50 max-w-container text-purple-600">
 				<a href="/#about-me" className="nav-link">
-					<AiFillHome className="w-6 h-6" />
+					<AiFillHome className="w-6 h-6 md:hidden" />
+					<p className="hidden md:block font-Glimer-Heavy">About</p>
 				</a>
 				<a href="/#my-projects" className="nav-link">
-					<GiBriefcase className="w-7 h-7" />
+					<GiBriefcase className="w-7 h-7 md:hidden" />
+					<p className="hidden md:block font-Glimer-Heavy">Projects</p>
 				</a>
 				<a href="/#contact-me" className="nav-link">
-					<SiGooglemessages className="w-6 h-6" />
+					<SiGooglemessages className="w-6 h-6 md:hidden" />
+					<p className="hidden md:block font-Glimer-Heavy">Contact Me</p>
 				</a>
 			</nav>
 
-			<div className="grid grid-cols-2 gap-10 min-h-screen pt-[5.8rem] pb-10">
+			<div className="lg:grid lg:grid-cols-2 lg:gap-10 min-h-screen pt-[5.8rem] pb-10">
 				<div className="space-y-5">
 					<h1 className="section-title">Front-End Developer</h1>
 
@@ -48,7 +51,7 @@ export const About = () => {
 							rel="noreferrer"
 						>
 							<div className="icon-container">
-								<img src={linkedin} alt="" className="sm:h-8 sm:w-8 h-5 w-5" />
+								<img src={linkedin} alt="" className="h-8 w-8" />
 							</div>
 						</a>
 
@@ -58,13 +61,13 @@ export const About = () => {
 							rel="noreferrer"
 						>
 							<div className="icon-container">
-								<img src={github} alt="" className="sm:h-8 sm:w-8 h-5 w-5" />
+								<img src={github} alt="" className="h-8 w-8" />
 							</div>
 						</a>
 
 						<a href={gmailLink} target="_blank" rel="noreferrer">
 							<div className="icon-container">
-								<img src={gmail} alt="" className="sm:h-8 sm:w-8 h-5 w-5" />
+								<img src={gmail} alt="" className="h-8 w-8" />
 							</div>
 						</a>
 					</div>
@@ -78,7 +81,7 @@ export const About = () => {
 					</div>
 				</div>
 
-				<div className="ml-10 mt-5">
+				<div className="lg:ml-10 lg:mt-5">
 					<div className="grid grid-cols-2 gap-2">
 						<AchievementTag
 							icon={<GiCash className="h-8 w-8" />}
@@ -93,15 +96,15 @@ export const About = () => {
 							}
 						/>
 						<AchievementTag
-							icon={<FcWorkflow className="h-8 w-8" />}
-							description={
-								'Simplified complex workflows by leveraging modularization and best practices in React.'
-							}
-						/>
-						<AchievementTag
 							icon={<FaPeopleCarry className="h-8 w-8" />}
 							description={
 								'Experienced team lead, coordinated tasks and ensured project requirements were met.'
+							}
+						/>
+						<AchievementTag
+							icon={<FcWorkflow className="h-8 w-8" />}
+							description={
+								'Simplified complex workflows by leveraging modularization and best practices in React.'
 							}
 						/>
 					</div>

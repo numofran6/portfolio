@@ -8,12 +8,16 @@ export const ProjectContainer = ({
 	liveSiteLink,
 	stack = [],
 	reverse = false,
-	box1Width = 'w-2/5',
-	box2Width = 'w-3/5',
-	imageHeight = 'h-[35rem]',
+	box1Width = 'md:w-2/5',
+	box2Width = 'md:w-3/5',
+	imageHeight = 'h-[25rem] md:h-[35rem]',
 }) => {
 	return (
-		<div className={`container gap-10 flex ${reverse && 'flex-row-reverse'}`}>
+		<div
+			className={`container gap-10 flex flex-col md:flex-row ${
+				reverse && 'md:flex-row-reverse'
+			}`}
+		>
 			<div
 				className={`text-container space-y-6 ${box1Width} flex flex-col justify-center ${
 					reverse && 'items-end'

@@ -22,7 +22,7 @@
 }
 
 .icon-container {
-	@apply rounded-full 2xl:h-[5rem] 2xl:w-[5rem] xl:h-[4.6rem] xl:w-[4.6rem] lg:h-[4.2rem] lg:w-[4.2rem] md:h-[3.8rem] md:w-[3.8rem] vvs:h-[3.4rem] vvs:w-[3.4rem] h-[2.5rem] w-[2.5rem] bg-[#ffffff]/90 flex justify-center hover:border-[#420fe7] items-center border-8 border-[#420fe7]/20  transition duration-500 ease-in-out;
+	@apply rounded-full h-[4.2rem] w-[4.2rem] bg-[#ffffff]/90 flex justify-center hover:border-purple-600 items-center border-8 border-[#420fe7]/20  transition duration-500 ease-in-out;
 }
 
 .project-icon {
@@ -34,7 +34,7 @@
 }
 
 .section-title {
-	@apply text-[#420fe7] font-Glimer-Outlined font-semibold z-40 text-4xl md:text-6xl lg:text-8xl;
+	@apply text-[#420fe7] font-Glimer-Outlined font-semibold z-40 text-6xl lg:text-8xl;
 }
 
 .footer-link {
