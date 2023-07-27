@@ -74,7 +74,7 @@ export const ProjectContainer = ({
 			>
 				<img
 					src={image}
-					// loading="lazy"
+					loading="lazy"
 					alt="project cover"
 					className="absolute w-full object-cover h-full img bg-gradient-to-r from-purple-50 to-purple-100/50"
 				/>
