@@ -18,7 +18,7 @@ export const About = () => {
 	return (
 		<header className="max-w-container" id="about-me">
 			<nav className="fixed inset-x-0 bg-gradient-to-r from-purple-50 to-purple-50 z-50">
-				<div className=" flex justify-end items-center space-x-10 h-[4rem] max-w-container text-[#240658]">
+				<div className=" flex justify-center md:justify-end items-center space-x-16 md:space-x-10 h-[4rem] max-w-container text-[#240658]">
 					<a href="/#about-me" className="nav-link">
 						<AiFillHome className="w-6 h-6 md:hidden" />
 						<p className="hidden md:block font-Glimer-Heavy">About</p>
