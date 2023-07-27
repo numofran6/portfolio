@@ -65,7 +65,7 @@ export const Projects = () => {
 							y: '54px',
 							ease: 'power4.inOut',
 						},
-						0.5
+						0.2
 					)
 					.from(
 						contentP,
@@ -75,7 +75,7 @@ export const Projects = () => {
 							opacity: 0,
 							ease: 'power4.inOut',
 						},
-						1
+						0.6
 					)
 					.from(
 						contentBtn,
@@ -85,7 +85,7 @@ export const Projects = () => {
 							opacity: 0,
 							ease: 'power4.inOut',
 						},
-						1.2
+						1
 					)
 					.from(
 						contentStack,
@@ -95,7 +95,7 @@ export const Projects = () => {
 							opacity: 0,
 							ease: 'power4.inOut',
 						},
-						1.2
+						1.4
 					);
 			});
 
