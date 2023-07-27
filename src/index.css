@@ -15,14 +15,14 @@
 }
 
 .btn-primary {
-	@apply rounded-full w-fit text-[#420fe7] hover:bg-[#240658] hover:text-[#fcfcfc] 
+	@apply rounded-full w-fit text-[#420fe7] hover:bg-[#420fe7] hover:text-[#fcfcfc] 
 	transition duration-500 ease-in-out font-Glimer-Bold font-medium 
 	border-[1px] focus:outline-none flex items-center justify-center 
 	border-[#420fe7] py-3 px-6 text-lg xl:text-xl 2xl:text-2xl my-10;
 }
 
 .icon-container {
-	@apply rounded-full h-[4.2rem] w-[4.2rem] bg-[#ffffff]/90 flex justify-center hover:border-purple-600 items-center border-8 border-[#420fe7]/20  transition duration-500 ease-in-out;
+	@apply rounded-full h-[4.2rem] w-[4.2rem] bg-[#ffffff]/90 flex justify-center hover:border-[#420fe7] items-center border-8 border-[#420fe7]/20  transition duration-500 ease-in-out;
 }
 
 .project-icon {
