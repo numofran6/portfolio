@@ -20,7 +20,7 @@ export const Contact = () => {
 			const tl = gsap
 				.timeline({
 					scrollTrigger: {
-						trigger: '#contact-section',
+						trigger: '#contact-me',
 						start: 'top 10%',
 						end: 'top top',
 						toggleActions: 'play none resume pause',

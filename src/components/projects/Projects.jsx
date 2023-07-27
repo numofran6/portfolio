@@ -61,7 +61,7 @@ export const Projects = () => {
 					.from(
 						contentLine.firstChild,
 						{
-							duration: 1,
+							duration: 1.5,
 							y: '54px',
 							ease: 'power4.inOut',
 						},
@@ -70,7 +70,7 @@ export const Projects = () => {
 					.from(
 						contentP,
 						{
-							duration: 1,
+							duration: 1.5,
 							y: 20,
 							opacity: 0,
 							ease: 'power4.inOut',
@@ -80,7 +80,7 @@ export const Projects = () => {
 					.from(
 						contentBtn,
 						{
-							duration: 1,
+							duration: 1.5,
 							y: 20,
 							opacity: 0,
 							ease: 'power4.inOut',
@@ -90,7 +90,7 @@ export const Projects = () => {
 					.from(
 						contentStack,
 						{
-							duration: 1,
+							duration: 1.5,
 							y: 20,
 							opacity: 0,
 							ease: 'power4.inOut',
