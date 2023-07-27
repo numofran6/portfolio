@@ -62,7 +62,10 @@ export const ProjectContainer = ({
 				</div>
 			</div>
 
-			<div
+			<a
+				rel="noreferrer"
+				target="_blank"
+				href={liveSiteLink}
 				className={`${imageHeight} ${box2Width}  relative overflow-hidden img-wrapper`}
 			>
 				<img
@@ -71,7 +74,7 @@ export const ProjectContainer = ({
 					className="absolute w-full object-cover h-full img bg-gradient-to-r from-purple-50 to-purple-100/50"
 				/>
 				<div className="img-container absolute top-0 right-0 w-full h-full"></div>
-			</div>
+			</a>
 		</div>
 	);
 };

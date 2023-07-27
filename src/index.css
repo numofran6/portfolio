@@ -3,14 +3,22 @@
 @tailwind utilities;
 
 .max-w-container {
-	@apply max-w-[70rem] mx-auto px-7 lg:px-0;
+	@apply max-w-[75rem] mx-auto px-7 lg:px-0;
+}
+
+.nav-link {
+	@apply text-sm hover:text-[#420fe7] transition duration-500 ease-in-out;
+}
+
+.highlight {
+	@apply font-Glimer-Heavy;
 }
 
 .btn-primary {
 	@apply rounded-full w-fit text-[#420fe7] hover:bg-[#240658] hover:text-[#fcfcfc] 
 	transition duration-500 ease-in-out font-Glimer-Bold font-medium 
 	border-[1px] focus:outline-none flex items-center justify-center 
-	border-[#420fe7]/50 py-3 px-6 text-lg xl:text-xl 2xl:text-2xl my-10;
+	border-[#420fe7] py-3 px-6 text-lg xl:text-xl 2xl:text-2xl my-10;
 }
 
 .icon-container {

@@ -124,7 +124,7 @@ export const Projects = () => {
 	}, []);
 
 	return (
-		<div className="w-full max-w-container" id="projects">
+		<div className="w-full pt-[4rem] max-w-container" id="my-projects">
 			<h1 id="project-heading" className="section-title">
 				<span className="block">Featured</span>
 				<span className="block">Projects</span>
@@ -135,8 +135,8 @@ export const Projects = () => {
 					image={tourbuddy}
 					title="Tour Buddy"
 					description="A platform that seamlessly connects travel enthusiasts to locals for organized adventures and amazing experiences."
-					githubLink="https://tourbuddy.onrender.com/"
-					liveSiteLink="https://github.com/numofran6/tour-buddy-frontend"
+					liveSiteLink="https://tourbuddy.onrender.com/"
+					githubLink="https://github.com/numofran6/tour-buddy-frontend"
 					stack={projectStack.tourBuddy}
 				/>
 

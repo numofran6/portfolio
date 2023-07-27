@@ -1,10 +1,15 @@
 import { useEffect } from 'react';
 import gsap from 'gsap';
 import { BsFileEarmarkPdf } from 'react-icons/bs';
-import resume from '../../assets/file/resume.pdf';
+import resume from '../../assets/file/Numo_Francis_CV.pdf';
 import { github, gmail, linkedin, phone } from '../../assets/images/images';
 
 export const Contact = () => {
+	const emailAddress = 'numofran6@gmail.com';
+	const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+		emailAddress
+	)}`;
+
 	useEffect(() => {
 		const textContainer = document.querySelector('.text');
 		const heading = textContainer.children[0];
@@ -53,8 +58,8 @@ export const Contact = () => {
 
 	return (
 		<div
-			id="contact-section"
-			className="min-h-screen w-full py-10 flex flex-col justify-between max-w-container"
+			id="contact-me"
+			className="min-h-screen w-full pt-[4rem] pb-10 flex flex-col justify-between max-w-container"
 		>
 			<div className="text space-y-12">
 				<h1 className="section-title">
@@ -63,19 +68,27 @@ export const Contact = () => {
 
 				<div className="flex items-center justify-between">
 					<div className="flex items-center space-x-4">
-						<a href="numofran6@gmail.com">
+						<a href={gmailLink} target="_blank" rel="noreferrer">
 							<div className="icon-container">
 								<img src={gmail} alt="" className="sm:h-8 sm:w-8 h-5 w-5" />
 							</div>
 						</a>
 
-						<a href="https://linkedin.com/in/numofrancis">
+						<a
+							href="https://linkedin.com/in/numofrancis"
+							target="_blank"
+							rel="noreferrer"
+						>
 							<div className="icon-container">
 								<img src={linkedin} alt="" className="sm:h-8 sm:w-8 h-5 w-5" />
 							</div>
 						</a>
 
-						<a href="https://github.com/numofran6">
+						<a
+							href="https://github.com/numofran6"
+							target="_blank"
+							rel="noreferrer"
+						>
 							<div className="icon-container">
 								<img src={github} alt="" className="sm:h-8 sm:w-8 h-5 w-5" />
 							</div>
@@ -92,7 +105,7 @@ export const Contact = () => {
 				</div>
 
 				<div className="flex">
-					<a href={resume} download={resume}>
+					<a href={resume} download={resume} target="_blank" rel="noreferrer">
 						<button id="download-btn" className="btn-primary">
 							<BsFileEarmarkPdf className="mr-2" /> Download Resume
 						</button>
@@ -108,19 +121,15 @@ export const Contact = () => {
 						</p>
 
 						<div className="flex items-center space-x-5">
-							<a smooth href="/#home" className="footer-link">
-								Home
-							</a>
-
-							<a smooth href="/#about-me" className="footer-link">
+							<a href="/#about-me" className="footer-link">
 								About Me
 							</a>
 
-							<a smooth href="/#my-projects" className="footer-link">
+							<a href="/#my-projects" className="footer-link">
 								Projects
 							</a>
 
-							<a smooth href="/#contact-me" className="footer-link">
+							<a href="/#contact-me" className="footer-link">
 								Contact Me
 							</a>
 						</div>

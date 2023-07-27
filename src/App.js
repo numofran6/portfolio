@@ -1,10 +1,13 @@
-import { Contact, Projects } from "./components";
+import { About, Contact, Projects } from "./components";
 
 
 function App() {
   return (
     <>
+      <About />
+
       <Projects />
+
       <Contact />
     </>
   );
