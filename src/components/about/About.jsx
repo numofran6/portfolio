@@ -1,15 +1,26 @@
 import { GoVerified } from 'react-icons/go';
-import { GiBriefcase, GiCash } from 'react-icons/gi';
+import { GiCash } from 'react-icons/gi';
 import { FaPeopleCarry } from 'react-icons/fa';
 import { FcWorkflow } from 'react-icons/fc';
 import { BsFileEarmarkPdf } from 'react-icons/bs';
-import { SiGooglemessages } from 'react-icons/si';
-import { AiFillHome } from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai';
+import { CgMenuRightAlt } from 'react-icons/cg';
 import { github, gmail, linkedin } from '../../assets/images/images';
 import resume from '../../assets/file/Numo_Francis_CV.pdf';
 import { AchievementTag } from './AchievementTag';
+import { useState } from 'react';
 
 export const About = () => {
+	const [openMenu, setOpenMenu] = useState(false);
+	const skills = [
+		'React.js',
+		'Node.js',
+		'Redux',
+		'TypeScript',
+		'Storybook',
+		'Jest',
+	];
+
 	const emailAddress = 'numofran6@gmail.com';
 	const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
 		emailAddress
@@ -17,24 +28,67 @@ export const About = () => {
 
 	return (
 		<header className="max-w-container" id="about-me">
-			<nav className="fixed inset-x-0 bg-gradient-to-r from-purple-50 to-purple-50 z-50">
-				<div className=" flex justify-center md:justify-end items-center space-x-16 md:space-x-10 h-[4rem] max-w-container text-[#240658]">
-					<a href="/#about-me" className="nav-link">
-						<AiFillHome className="w-6 h-6 md:hidden" />
-						<p className="hidden md:block font-Glimer-Heavy">About</p>
-					</a>
-					<a href="/#my-projects" className="nav-link">
-						<GiBriefcase className="w-7 h-7 md:hidden" />
-						<p className="hidden md:block font-Glimer-Heavy">Projects</p>
-					</a>
-					<a href="/#contact-me" className="nav-link">
-						<SiGooglemessages className="w-6 h-6 md:hidden" />
-						<p className="hidden md:block font-Glimer-Heavy">Contact Me</p>
-					</a>
+			<nav className="fixed inset-x-0 bg-gradient-to-r from-purple-50 to-purple-50 z-40">
+				<div className="flex justify-between items-center h-[4rem] max-w-container">
+					<h1 className="text-[#420fe7] font-Glimer-Heavy">
+						{'< '}Numo{' />'}
+					</h1>
+
+					<div className="hidden md:flex items-center space-x-10 text-[#420fe7]">
+						<a href="/#about-me" className="nav-link">
+							<p>About</p>
+						</a>
+						<a href="/#my-projects" className="nav-link">
+							<p>Projects</p>
+						</a>
+						<a href="/#contact-me" className="nav-link">
+							<p>Contact Me</p>
+						</a>
+					</div>
+
+					<div className="md:hidden">
+						<button onClick={() => setOpenMenu(true)}>
+							<CgMenuRightAlt className="text-[#420fe7] w-7 h-7" />
+						</button>
+					</div>
+
+					{openMenu && (
+						<div className="fixed inset-0 bg-black z-50 text-[#420fe7] p-10">
+							<div className="flex justify-end">
+								<button onClick={() => setOpenMenu(false)}>
+									<AiOutlineClose className="w-10 h-10 text-white" />
+								</button>
+							</div>
+
+							<div className="lg:hidden flex flex-col items-center justify-center h-[90%] text-2xl font-semibold space-y-10">
+								<a
+									href="/#about-me"
+									onClick={() => setOpenMenu(false)}
+									className="text-4xl font-Glimer-Medium"
+								>
+									<p>About</p>
+								</a>
+								<a
+									href="/#my-projects"
+									onClick={() => setOpenMenu(false)}
+									className="text-4xl font-Glimer-Medium"
+								>
+									<p>Projects</p>
+								</a>
+								<a
+									href="/#contact-me"
+									onClick={() => setOpenMenu(false)}
+									className="text-4xl font-Glimer-Medium"
+								>
+									<p>Contact Me</p>
+								</a>
+							</div>
+						</div>
+					)}
 				</div>
 			</nav>
 
-			<div className="lg:grid lg:grid-cols-2 lg:gap-10 min-h-screen pt-[5.8rem] pb-10">
+			<div className="lg:grid lg:grid-cols-2 lg:gap-10 min-h-screen pt-[5.8rem]">
 				<div className="space-y-5">
 					<h1 className="section-title">Front-End Developer</h1>
 
@@ -45,6 +99,14 @@ export const About = () => {
 						<span className="highlight">address unique challenges</span> and
 						measurably impact the bottom line.
 					</p>
+
+					<div className="flex items-center flex-wrap space-y-2 lg:space-y-0">
+						{skills.map((skill) => (
+							<p className="bg-gradient-to-r from-purple-50 to-purple-50 p-2 text-[#420fe7] font-semibold px-4 rounded-full text-[0.8rem] mr-2">
+								{skill}
+							</p>
+						))}
+					</div>
 
 					<div className="flex items-center space-x-4">
 						<a
