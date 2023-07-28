@@ -9,6 +9,7 @@ import { github, gmail, linkedin } from '../../assets/images/images';
 import resume from '../../assets/file/Numo_Francis_CV.pdf';
 import { AchievementTag } from './AchievementTag';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export const About = () => {
 	const [openMenu, setOpenMenu] = useState(false);
@@ -27,12 +28,18 @@ export const About = () => {
 	)}`;
 
 	return (
-		<header className="max-w-container" id="about-me">
+		<motion.header
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			className="max-w-container"
+			id="about-me"
+		>
 			<nav className="fixed inset-x-0 bg-gradient-to-r from-purple-50 to-purple-50 z-40">
 				<div className="flex justify-between items-center h-[4rem] max-w-container">
-					<h1 className="text-[#420fe7] font-Glimer-Heavy">
+					<a href="/#about-me" className="text-[#420fe7] font-Glimer-Heavy">
 						{'< '}Numo{' />'}
-					</h1>
+					</a>
 
 					<div className="hidden md:flex items-center space-x-10 text-[#420fe7]">
 						<a href="/#about-me" className="nav-link">
@@ -53,7 +60,12 @@ export const About = () => {
 					</div>
 
 					{openMenu && (
-						<div className="fixed inset-0 bg-black z-50 text-[#420fe7] p-10">
+						<motion.div
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							exit={{ opacity: 0 }}
+							className="fixed inset-0 bg-black z-50 text-[#420fe7] p-10"
+						>
 							<div className="flex justify-end">
 								<button onClick={() => setOpenMenu(false)}>
 									<AiOutlineClose className="w-10 h-10 text-white" />
@@ -83,7 +95,7 @@ export const About = () => {
 									<p>Contact Me</p>
 								</a>
 							</div>
-						</div>
+						</motion.div>
 					)}
 				</div>
 			</nav>
@@ -174,6 +186,6 @@ export const About = () => {
 					</div>
 				</div>
 			</div>
-		</header>
+		</motion.header>
 	);
 };
