@@ -114,7 +114,7 @@ export const About = () => {
 
 					<div className="flex items-center flex-wrap space-y-2 lg:space-y-0">
 						{skills.map((skill) => (
-							<p className="bg-gradient-to-r from-purple-50 to-purple-50 p-2 text-[#420fe7] font-semibold px-4 rounded-full text-[0.8rem] mr-2 hover:bg-[#420fe7] hover:text-[#fcfcfc] transition-all duration-500 ease-in-out">
+							<p className="bg-purple-50 p-2 text-[#420fe7] font-semibold px-4 rounded-full text-[0.8rem] mr-2 hover:bg-[#420fe7] hover:text-[#fcfcfc] transition-all duration-500 ease-in-out">
 								{skill}
 							</p>
 						))}
