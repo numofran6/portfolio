@@ -85,7 +85,7 @@ export const Projects = () => {
 							opacity: 0,
 							ease: 'power4.inOut',
 						},
-						1
+						0.6
 					)
 					.from(
 						contentStack,
@@ -95,7 +95,7 @@ export const Projects = () => {
 							opacity: 0,
 							ease: 'power4.inOut',
 						},
-						1.4
+						0.6
 					);
 			});
 
