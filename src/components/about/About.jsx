@@ -112,7 +112,7 @@ export const About = () => {
 						measurably impact the bottom line.
 					</p>
 
-					<div className="flex items-center flex-wrap space-y-2 lg:space-y-0">
+					<div className="flex items-center flex-wrap gap-2">
 						{skills.map((skill) => (
 							<p className="bg-purple-50 p-2 text-[#420fe7] font-semibold px-4 rounded-full text-[0.8rem] mr-2 hover:bg-[#420fe7] hover:text-[#fcfcfc] transition-all duration-500 ease-in-out cursor-default">
 								{skill}
