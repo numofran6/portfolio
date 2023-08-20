@@ -1,5 +1,5 @@
 import { GoVerified } from 'react-icons/go';
-import { GiCash } from 'react-icons/gi';
+import { FiDollarSign } from 'react-icons/fi';
 import { FaPeopleCarry } from 'react-icons/fa';
 import { FcWorkflow } from 'react-icons/fc';
 import { BsFileEarmarkPdf } from 'react-icons/bs';
@@ -160,7 +160,7 @@ export const About = () => {
 				<div className="lg:ml-10 lg:mt-5">
 					<div className="grid grid-cols-2 gap-2">
 						<AchievementTag
-							icon={<GiCash className="h-8 w-8" />}
+							icon={<FiDollarSign className="h-8 w-8" />}
 							description={
 								'Proven track record of utilizing React to develop high-performing software that generates revenue.'
 							}
