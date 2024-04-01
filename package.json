@@ -1,0 +1,17 @@
+{
+	"name": "numo-portfolio",
+	"version": "1.0.0",
+	"description": "Developer Portfolio",
+	"main": "index.html",
+	"scripts": {
+		"watch-css": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"tailwindcss": "^3.4.3"
+	},
+	"dependencies": {
+		"sass": "^1.72.0"
+	}
+}
