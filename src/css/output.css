@@ -590,6 +590,11 @@ html,
   display: flex;
 }
 
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -1713,5 +1718,9 @@ footer {
 @media (min-width: 1024px) {
   .lg\:mb-20 {
     margin-bottom: 5rem;
+  }
+
+  .lg\:h-full {
+    height: 100%;
   }
 }
