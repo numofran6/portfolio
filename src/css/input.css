@@ -51,7 +51,19 @@
 }
 
 .section-title {
-	@apply text-[var(--pink)] font-semibold z-40 text-6xl lg:text-8xl font-Glimer-Outlined;
+	@apply text-[var(--pink)] font-semibold text-6xl lg:text-8xl font-Glimer-Outlined;
+}
+
+.scrollbar-none {
+	scrollbar-width: none;
+}
+
+.fade-x {
+	mask-image: linear-gradient(270deg, transparent 0 .5%, #11253a 3% 97%, transparent 99.5% 100%);
+
+	@media (min-width: 1024px) {
+		mask-image: none;
+	}	
 }
 
 .footer-link {
@@ -123,7 +135,7 @@ header {
 				@apply md:hidden;
 
 				i {
-					@apply text-[#420fe7] text-2xl;
+					@apply text-[var(--text)] text-2xl;
 				}
 
 				.fa-bars {
@@ -135,32 +147,28 @@ header {
 				}
 			}
 		}
+
+		&.visible {
+			> div {
+				button {
+					.fa-bars {
+						@apply hidden;
+					}
+
+					.fa-xmark {
+						@apply block;
+					}
+				}
+			}
+		}
 	}
 
 	.pop-up {
-		@apply fixed top-0 bottom-0 left-0 right-0 text-[#420fe7] p-10 hidden flex-col items-center justify-center text-2xl font-semibold space-y-10 z-40;
+		@apply fixed inset-0 text-[var(--text)] p-10 hidden flex-col items-center justify-center text-2xl font-semibold space-y-10 z-40
+		bg-[#1B324C];
 
 		a {
 			@apply text-4xl;
-		}
-	}
-
-	/* nav, */
-	.pop-up {
-		@apply bg-gradient-to-r from-purple-50 to-purple-50;
-	}
-
-	nav.visible {
-		> div {
-			button {
-				.fa-bars {
-					@apply hidden;
-				}
-
-				.fa-xmark {
-					@apply block;
-				}
-			}
 		}
 	}
 
@@ -172,7 +180,7 @@ header {
 		@apply min-h-screen flex flex-col md:justify-center pt-[5.8rem] max-w-container;
 
 		.info {
-			@apply lg:grid lg:grid-cols-2 lg:gap-10;
+			@apply grid md:grid-cols-2 gap-10;
 
 			> div {
 				@apply space-y-5;
@@ -186,42 +194,54 @@ header {
 }
 
 main {
-	@apply w-full;
+	@apply mt-10 lg:mt-0 w-full;
 
 	.projects {
-		@apply flex gap-10 max-w-container;
+		@apply lg:flex lg:gap-10 max-w-container;
 
 		.project-nav {
-			@apply border-r border-[var(--text)] h-fit space-y-5 text-right pr-5 flex-shrink-0;
+			@apply overflow-x-scroll border-gray-700 scrollbar-none
+			flex items-end pb-5 space-x-5 fade-x pl-[8px] sm:pl-[12px] lg:pl-0
+			lg:block lg:border-r lg:h-fit lg:space-y-5 lg:text-right lg:pr-5 lg:flex-shrink-0 lg:pb-0 lg:space-x-0;
 
 			a {
+				@apply text-[var(--textMedium)] hover:text-[var(--text)] smooth
+				flex flex-col items-center text-center flex-shrink-0
+				lg:block lg:text-right lg:flex-row;
+
 				&.active {
 					@apply text-[var(--pink)] hover:text-[var(--pink)];
 					
 					&::before {
-						content: "\2192";
-						margin-right: 8px;
+						@apply mr-[8px];
+						content: "\2193";
+					}
+
+					@media (min-width: 1024px) {
+						&::before {
+							content: "\2192";
+						}
 					}
 				}
-				
-				@apply text-[var(--textMedium)] hover:text-[var(--text)] smooth;
 			}
 		}
 
 		.project-info {
+			@apply border-t border-gray-700 lg:border-0;
+
 			.project {
-				@apply md:h-[440px] md:max-h-[440px] grid-cols-2 gap-5 hidden;
+				@apply mt-10 lg:mt-0 lg:h-[440px] lg:max-h-[440px] lg:grid-cols-2 gap-5 hidden;
 
 				&.visible {
 					@apply grid;
 				}
 
 				.image, .description .name, .description .actions {
-					@apply p-8 bg-[var(--bgProject)] rounded-3xl;
+					@apply p-8 lg:bg-[var(--bgProject)] rounded-3xl;
 				}
 
 				.image {
-					@apply flex items-center border border-transparent hover:border-[var(--pink)] smooth;
+					@apply flex items-center border border-transparent hover:border-[var(--pink)] smooth bg-[var(--bgProject)];
 
 					&:hover {
 						img {
@@ -235,7 +255,7 @@ main {
 				}
 
 				.description {
-					@apply grid grid-rows-2 gap-5;
+					@apply grid grid-rows-2 gap-5 bg-[var(--bgProject)] lg:bg-transparent rounded-3xl lg:rounded-none;
 
 					.name {
 						@apply flex flex-col justify-between;
@@ -246,7 +266,7 @@ main {
 					}
 
 					.actions {
-						@apply flex flex-col justify-between;
+						@apply flex flex-col justify-between space-y-12 lg:space-y-0;
 
 						.stack {
 							@apply flex flex-wrap;
@@ -274,7 +294,7 @@ footer {
 
 		.left-img, .right-img {
 			svg {
-				@apply w-[350px] absolute top-[50%];
+				@apply w-[350px] absolute top-[50%] hidden md:block;
 			}
 		}
 
@@ -288,7 +308,7 @@ footer {
 		}
 
 		.details {
-			@apply max-w-[650px] mx-auto relative z-10;
+			@apply max-w-[650px] mx-auto relative z-10 bg-[#181A20];
 
 			> h1 {
 				font-size: 4.5rem;
