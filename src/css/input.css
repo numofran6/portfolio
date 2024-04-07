@@ -267,7 +267,7 @@ main {
 }
 
 footer {
-	@apply mt-28;
+	@apply min-h-screen flex flex-col justify-center relative;
 
 	.desc {
 		@apply space-y-7 md:space-y-12 relative py-20;
@@ -305,7 +305,7 @@ footer {
 	}
 
 	nav {
-		@apply py-6 max-w-container flex justify-between;
+		@apply py-6 max-w-container flex justify-between w-full absolute bottom-16 right-0 left-0;
 
 		p {
 			@apply text-sm;

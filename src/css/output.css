@@ -594,18 +594,6 @@ html,
   display: flex;
 }
 
-.h-16 {
-  height: 4rem;
-}
-
-.min-h-\[85vh\] {
-  min-height: 85vh;
-}
-
-.w-16 {
-  width: 4rem;
-}
-
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -1368,7 +1356,11 @@ main {
 }
 
 footer {
-  margin-top: 7rem;
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
   .desc {
     position: relative;
   }
@@ -1481,7 +1473,22 @@ footer {
     }
   }
   nav {
+    position: absolute;
+  }
+  nav {
+    bottom: 4rem;
+  }
+  nav {
+    right: 0px;
+  }
+  nav {
+    left: 0px;
+  }
+  nav {
     display: flex;
+  }
+  nav {
+    width: 100%;
   }
   nav {
     justify-content: space-between;
