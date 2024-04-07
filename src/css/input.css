@@ -201,7 +201,7 @@ main {
 
 		.project-nav {
 			@apply overflow-x-scroll border-gray-700 scrollbar-none
-			flex items-end pb-5 space-x-5 fade-x pl-[8px] sm:pl-[12px] lg:pl-0
+			flex items-end pb-5 space-x-5 fade-x px-[8px] sm:pl-[12px] lg:pl-0
 			lg:block lg:border-r lg:h-fit lg:space-y-5 lg:text-right lg:pr-5 lg:flex-shrink-0 lg:pb-0 lg:space-x-0;
 
 			a {

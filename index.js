@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const tourBuddy = projectInfo.querySelector('#tour-buddy')
 	const greenShop = projectInfo.querySelector('#green-shop')
 	const churchBlog = projectInfo.querySelector('#church-blog')
-	const bookingApp = projectInfo.querySelector('#booking-app')
+	const bookingApp = projectInfo.querySelector('#tricia-kissi')
 
 	projectLinks.forEach(link => {
 		link.addEventListener('click', (e) => {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				greenShop.classList.remove('visible');
 				churchBlog.classList.add('visible');
 				bookingApp.classList.remove('visible');
-			} else if (currentLink === 'booking-app') {
+			} else if (currentLink === 'tricia-kissi') {
 				tourBuddy.classList.remove('visible');
 				greenShop.classList.remove('visible');
 				churchBlog.classList.remove('visible');
