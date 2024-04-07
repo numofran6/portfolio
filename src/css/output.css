@@ -1164,7 +1164,10 @@ main {
     .project-nav {
       a {
         &.active {
-          color: var(--text);
+          color: var(--pink);
+        }
+        &.active:hover {
+          color: var(--pink);
         }
         &.active {
           &::before {
@@ -1188,7 +1191,7 @@ main {
         transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
       }
       a:hover {
-        color: var(--pink);
+        color: var(--text);
       }
     }
     .project-info {

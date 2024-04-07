@@ -196,7 +196,7 @@ main {
 
 			a {
 				&.active {
-					@apply text-[var(--text)];
+					@apply text-[var(--pink)] hover:text-[var(--pink)];
 					
 					&::before {
 						content: "\2192";
@@ -204,7 +204,7 @@ main {
 					}
 				}
 				
-				@apply text-[var(--textMedium)] hover:text-[var(--pink)] smooth;
+				@apply text-[var(--textMedium)] hover:text-[var(--text)] smooth;
 			}
 		}
 
