@@ -2,42 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --pink: rgb(234 76 137);
+  --text: rgb(193 197 208);
+  --purple: rgb(107 92 229);
+  --bgProject: rgba(28,61,96,.7);
+  --tertiary: #275586;
+  --primary: rgb(193 211 230);
+  --bgHighlight:rgb(29 29 29);
+}
+
 @font-face {
 	font-family: 'Glimer-Outlined';
 	src: url(../../assets/Gilmer-Font/Gilmer\ Outline.otf);
 }
 
-@font-face {
-	font-family: 'Glimer-Bold';
-	src: url(../../assets/Gilmer-Font/Gilmer\ Bold.woff);
+.max-w-container {
+	@apply max-w-[75rem] mx-auto px-7 lg:px-0;
 }
 
-@font-face {
-	font-family: 'Glimer-Heavy';
-	src: url(../../assets/Gilmer-Font/Gilmer\ Heavy.otf);
+.nav-link {
+	@apply text-sm hover:text-[var(--tertiary)] transition duration-500 ease-in-out;
 }
 
-@font-face {
-	font-family: 'Glimer-Light';
-	src: url(../../assets/Gilmer-Font/Gilmer\ Light.otf);
+.btn-primary {
+	@apply rounded-full w-fit text-[var(--primary)] hover:bg-[var(--bgHighlight)] hover:border-[var(--tertiary)] hover:text-[#fcfcfc] 
+	transition duration-500 ease-in-out font-medium 
+	border-[1px] focus:outline-none flex items-center justify-center 
+	border-[var(--primary)] py-3 px-6 text-lg xl:text-xl 2xl:text-2xl my-10;
 }
 
-@font-face {
-	font-family: 'Glimer-Medium';
-	src: url(../../assets/Gilmer-Font/Gilmer\ Medium.otf);
+.icon-container {
+	@apply rounded-full flex justify-center items-center border-[1px] border-[var(--text)] transition duration-500 ease-in-out py-3 px-6 hover:border-[var(--tertiary)] hover:bg-[var(--bgHighlight)];
 }
 
-@font-face {
-	font-family: 'Glimer-Regular';
-	src: url(../../assets/Gilmer-Font/Gilmer\ Regular.otf);
+.project-icon {
+	@apply w-10 h-10;
+}
+
+.contact-icon {
+	@apply h-7 w-7;
+}
+
+.section-title {
+	@apply text-[var(--pink)] font-semibold z-40 text-6xl lg:text-8xl font-Glimer-Outlined;
+}
+
+.footer-link {
+	@apply hover:text-[#420fe7] transition duration-500 ease-in-out;
 }
 
 @layer base {
 	html,
 	body {
-		background-color: #fcfcfc;
-		color: #3f4145;
-		font-family: 'Glimer-Light', sans-serif;
+		font-family: 'Bricolage Grotesque', sans-serif;
+		background-color: #181A20;
+		color: var(--text);
 	}
 
 	.img {
@@ -74,60 +94,19 @@
 	}
 }
 
-.max-w-container {
-	@apply max-w-[75rem] mx-auto px-7 lg:px-0;
-}
-
-.nav-link {
-	@apply text-sm hover:text-[#240658] transition duration-500 ease-in-out font-Glimer-Regular;
-}
-
-.highlight {
-	@apply font-Glimer-Heavy;
-}
-
-.btn-primary {
-	@apply rounded-full w-fit text-[#420fe7] hover:bg-[#420fe7] hover:text-[#fcfcfc] 
-	transition duration-500 ease-in-out font-Glimer-Bold font-medium 
-	border-[1px] focus:outline-none flex items-center justify-center 
-	border-[#420fe7] py-3 px-6 text-lg xl:text-xl 2xl:text-2xl my-10;
-}
-
-.icon-container {
-	@apply rounded-full h-[4.2rem] w-[4.2rem] bg-[#ffffff]/90 flex justify-center hover:border-[#420fe7] items-center border-8 border-[#420fe7]/20  transition duration-500 ease-in-out;
-}
-
-.project-icon {
-	@apply w-10 h-10;
-}
-
-.contact-icon {
-	@apply h-7 w-7;
-}
-
-.section-title {
-	@apply text-[#420fe7] font-semibold z-40 text-6xl lg:text-8xl font-Glimer-Outlined;
-}
-
-.footer-link {
-	@apply hover:text-[#420fe7] transition duration-500 ease-in-out;
-}
-
 header {
-	@apply max-w-container;
-
 	nav {
-		@apply fixed inset-x-0 z-50;
+		@apply fixed inset-x-0 z-50 top-0 backdrop-blur-md;
 
 		> div {
-			@apply flex justify-between items-center h-[4rem] max-w-container;
+			@apply flex justify-between items-center h-[5rem] max-w-container;
 
 			a {
-				@apply text-[#420fe7] font-Glimer-Heavy;
+				@apply text-[var(--primary)] font-bold;
 			}
 
 			> div {
-				@apply hidden md:flex items-center space-x-10 text-[#420fe7];
+				@apply hidden md:flex items-center space-x-10 text-[var(--bgProject)];
 
 				a {
 					@apply nav-link;
@@ -156,14 +135,14 @@ header {
 		@apply fixed top-0 bottom-0 left-0 right-0 text-[#420fe7] p-10 hidden flex-col items-center justify-center text-2xl font-semibold space-y-10 z-40;
 
 		a {
-			@apply text-4xl font-Glimer-Medium;
+			@apply text-4xl;
 		}
 	}
 
-	nav,
+	/* nav, */
 	.pop-up {
 		@apply bg-gradient-to-r from-purple-50 to-purple-50;
-	} 
+	}
 
 	nav.visible {
 		> div {
@@ -179,42 +158,21 @@ header {
 		}
 	}
 
-
 	.pop-up.visible {
 		@apply flex;
 	}
 
 	.hero {
-		@apply lg:grid lg:grid-cols-2 lg:gap-10 min-h-screen pt-[5.8rem];
+		@apply min-h-screen flex flex-col md:justify-center pt-[5.8rem] max-w-container;
 
-		.skills {
-			@apply flex items-center flex-wrap gap-y-2 gap-x-1;
+		.info {
+			@apply lg:grid lg:grid-cols-2 lg:gap-10;
 
-			p {
-				@apply bg-purple-50 p-2 text-[#420fe7] font-semibold px-4 rounded-full text-[0.8rem] mr-2 hover:bg-[#420fe7] hover:text-[#fcfcfc] transition-all duration-500 ease-in-out cursor-default;
-			}
-		}
+			> div {
+				@apply space-y-5;
 
-		.links {
-			@apply flex items-center space-x-4;
-
-			img {
-				@apply h-8 w-8;
-			}
-		}
-
-		.achievements {
-			@apply grid grid-cols-2 gap-2;
-
-			li {
-				@apply bg-white shadow min-h-[15rem] w-full p-5 flex flex-col justify-center space-y-3 hover:bg-purple-50 transition-all ease-in-out duration-500;
-
-				i {
-					@apply text-[#D92DFD] text-3xl;
-				}
-
-				p {
-					@apply text-sm;
+				.links {
+					@apply flex items-center space-x-4;
 				}
 			}
 		}
@@ -222,115 +180,118 @@ header {
 }
 
 main {
-	@apply w-full pt-[4rem] max-w-container;
+	@apply w-full;
 
-	h1 {
-		@apply section-title mb-5 md:mb-0;
-	}
+	.projects {
+		@apply flex gap-10 max-w-container;
 
-	ul {
-		@apply space-y-20 md:space-y-32 z-30;
+		.project-nav {
+			@apply border-r border-[var(--text)] h-fit space-y-5 text-right pr-5 flex-shrink-0;
 
-		li {
-			@apply container gap-10 flex flex-col-reverse md:flex-row;
+			a {
+				&.active {
+					@apply opacity-100;
+				}
+				
+				@apply opacity-50;
+			}
+		}
 
-			> div {
-				@apply space-y-6 flex flex-col justify-center;
+		.project-info {
+			.project {
+				@apply md:h-[440px] md:max-h-[440px] grid-cols-2 gap-5 hidden;
 
-				h1 {
-				@apply font-bold font-Glimer-Bold text-4xl flex items-center 2xl:h-[60px] overflow-hidden text-[#3f4145] z-0;
+				&.visible {
+					@apply grid;
 				}
 
-				p {
-					@apply text-lg;
+				.image, .description .name, .description .actions {
+					@apply p-8 bg-[var(--bgProject)] rounded-3xl;
 				}
 
-				> div {
-					@apply flex items-center flex-wrap;
+				.image {
+					@apply flex items-center border border-transparent hover:border-[var(--tertiary)];
+
+					img {
+						@apply w-[375px] h-[237px] m-auto object-cover;
+					}
 				}
 
-				.actions {
-					@apply flex space-x-10 items-center;
+				.description {
+					@apply grid grid-rows-2 gap-5;
 
-					a {
-						@apply uppercase text-sm flex items-center gap-2 hover:text-[#420fe7];
+					.name {
+						@apply flex flex-col justify-between;
 
-						i {
-							@apply text-xl transition duration-200 ease-in-out;
+						h1 {
+							@apply text-3xl font-bold;
+						}
+					}
+
+					.actions {
+						@apply flex flex-col justify-between;
+
+						.stack {
+							@apply flex flex-wrap;
 						}
 
-						.fa-github {
-							@apply text-2xl;
-						}
+						.links {
+							@apply space-x-5; 
 
-						&:hover {
-							i {
-								@apply -translate-y-1;
+							a {
+								@apply hover:text-[var(--tertiary)] transition-all ease-in-out duration-300;
 							}
 						}
 					}
 				}
-			}
-
-			&:nth-child(even) {
-				@apply md:flex-row-reverse;
-
-				> div {
-					@apply items-end;
-
-					p {
-						@apply text-right;
-					}
-
-					> div {
-						@apply justify-end;
-					}
-				}
-			}
-		}
-
-		.image {
-			@apply relative overflow-hidden h-[25rem] md:h-[35rem];
-
-			img {
-				@apply absolute w-full object-cover h-full img bg-gradient-to-r from-purple-50 to-purple-100/50;
-			}
-
-			div {
-				@apply img-container absolute top-0 right-0 w-full h-full -z-10;
 			}
 		}
 	}
 }
 
 footer {
-	@apply min-h-screen w-full pt-20 pb-10 flex flex-col justify-between max-w-container;
-
+	@apply mt-28;
+	
 	.desc {
-		@apply space-y-7 md:space-y-12;
+		@apply space-y-7 md:space-y-12 relative py-20;
 
-		.actions {
-			@apply flex flex-col space-y-5 md:space-y-0 md:flex-row md:items-center md:justify-between;
+		.left-img, .right-img {
+			svg {
+				@apply w-[350px] absolute top-[50%];
+			}
+		}
 
-			.links {
-				@apply flex items-center space-x-4;
+		.left-img svg {
+			@apply translate-y-[-50%] left-0;
+		}
 
-				img {
-					@apply sm:h-8 sm:w-8 h-5 w-5;
+		.right-img svg {
+			transform: translateY(-50%) rotateY(180deg);
+			right: 0;
+		}
+
+		.details {
+			@apply max-w-[650px] mx-auto relative z-10;
+
+			> h1 {
+				font-size: 4.5rem;
+			}
+			
+			.actions {
+				@apply flex flex-col space-y-5 md:space-y-0 md:flex-row md:items-center md:justify-between my-10;
+	
+				.links {
+					@apply flex items-center space-x-4;
 				}
 			}
 		}
 	}
 
 	nav {
-		@apply flex flex-col justify-center max-w-container text-center md:flex-row items-center md:justify-between;
+		@apply py-6 max-w-container flex justify-between;
 
 		p {
-			@apply font-Glimer-Bold text-xs md:text-lg;
-		}
-
-		div {
-			@apply flex text-sm items-center space-x-5 mb-5 md:mb-0;
+			@apply text-sm;
 		}
 	}
 }
