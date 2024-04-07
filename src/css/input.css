@@ -305,7 +305,7 @@ footer {
 	}
 
 	nav {
-		@apply py-6 max-w-container flex justify-between w-full absolute bottom-16 right-0 left-0;
+		@apply py-6 max-w-container flex justify-between w-full absolute bottom-8 right-0 left-0;
 
 		p {
 			@apply text-sm;
