@@ -1195,6 +1195,11 @@ main {
     }
     @media (min-width: 1024px) {
       .project-nav {
+        width: 9rem;
+      }
+    }
+    @media (min-width: 1024px) {
+      .project-nav {
         flex-shrink: 0;
       }
     }
