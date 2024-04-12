@@ -251,6 +251,8 @@ main {
 
 					img {
 						@apply w-[375px] h-[237px] m-auto object-cover smooth;
+						border: 4px solid #e5e7eb;
+						border-radius: 2px;
 					}
 				}
 
