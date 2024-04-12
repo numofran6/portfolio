@@ -250,7 +250,7 @@ main {
 					}
 
 					img {
-						@apply w-[375px] h-[237px] m-auto object-cover smooth border-4 border-red-500;
+						@apply w-[375px] h-[237px] m-auto object-cover smooth;
 					}
 				}
 
