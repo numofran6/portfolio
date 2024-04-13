@@ -1416,6 +1416,16 @@ main {
             width: 375px;
           }
           img {
+            border-radius: 0.125rem;
+          }
+          img {
+            border-width: 4px;
+          }
+          img {
+            --tw-border-opacity: 1;
+            border-color: rgb(229 231 235 / var(--tw-border-opacity));
+          }
+          img {
             -o-object-fit: cover;
                object-fit: cover;
           }
