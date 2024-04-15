@@ -682,13 +682,6 @@ html,
   padding-right: 1.75rem;
 }
 
-@media (min-width: 1024px) {
-  .max-w-container {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-}
-
 .nav-link {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -872,12 +865,6 @@ header {
       padding-left: 1.75rem;
       padding-right: 1.75rem;
     }
-    @media (min-width: 1024px) {
-      > div {
-        padding-left: 0px;
-        padding-right: 0px;
-      }
-    }
     > div {
       a {
         font-weight: 700;
@@ -1055,12 +1042,6 @@ header {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
   }
-  @media (min-width: 1024px) {
-    .hero {
-      padding-left: 0px;
-      padding-right: 0px;
-    }
-  }
   @media (min-width: 768px) {
     .hero {
       justify-content: center;
@@ -1123,12 +1104,6 @@ main {
   .projects {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
-  }
-  @media (min-width: 1024px) {
-    .projects {
-      padding-left: 0px;
-      padding-right: 0px;
-    }
   }
   @media (min-width: 1024px) {
     .projects {
@@ -1442,19 +1417,25 @@ main {
           }
         }
         .description {
-          display: grid;
-        }
-        .description {
-          grid-template-rows: repeat(2, minmax(0, 1fr));
-        }
-        .description {
-          gap: 1.25rem;
-        }
-        .description {
           border-radius: 1.5rem;
         }
         .description {
           background-color: var(--bgProject);
+        }
+        @media (min-width: 1024px) {
+          .description {
+            display: grid;
+          }
+        }
+        @media (min-width: 1024px) {
+          .description {
+            grid-template-rows: repeat(2, minmax(0, 1fr));
+          }
+        }
+        @media (min-width: 1024px) {
+          .description {
+            gap: 1.25rem;
+          }
         }
         @media (min-width: 1024px) {
           .description {
@@ -1476,6 +1457,26 @@ main {
           .name {
             justify-content: space-between;
           }
+          .name > :not([hidden]) ~ :not([hidden]) {
+            --tw-space-y-reverse: 0;
+            margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+          }
+          .name {
+            padding-bottom: 0px;
+          }
+          @media (min-width: 1024px) {
+            .name > :not([hidden]) ~ :not([hidden]) {
+              --tw-space-y-reverse: 0;
+              margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+              margin-bottom: calc(0px * var(--tw-space-y-reverse));
+            }
+          }
+          @media (min-width: 1024px) {
+            .name {
+              padding-bottom: 2rem;
+            }
+          }
           .name {
             h1 {
               font-size: 1.875rem;
@@ -1496,8 +1497,8 @@ main {
           }
           .actions > :not([hidden]) ~ :not([hidden]) {
             --tw-space-y-reverse: 0;
-            margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
-            margin-bottom: calc(3rem * var(--tw-space-y-reverse));
+            margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
           }
           @media (min-width: 1024px) {
             .actions > :not([hidden]) ~ :not([hidden]) {
@@ -1705,12 +1706,6 @@ footer {
   nav {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
-  }
-  @media (min-width: 1024px) {
-    nav {
-      padding-left: 0px;
-      padding-right: 0px;
-    }
   }
   nav {
     p {

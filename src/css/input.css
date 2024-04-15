@@ -24,7 +24,7 @@
 }
 
 .max-w-container {
-	@apply max-w-[75rem] mx-auto px-7 lg:px-0;
+	@apply max-w-[75rem] mx-auto px-7;
 }
 
 .nav-link {
@@ -255,10 +255,10 @@ main {
 				}
 
 				.description {
-					@apply grid grid-rows-2 gap-5 bg-[var(--bgProject)] lg:bg-transparent rounded-3xl lg:rounded-none;
+					@apply lg:grid lg:grid-rows-2 lg:gap-5 bg-[var(--bgProject)] lg:bg-transparent rounded-3xl lg:rounded-none;
 
 					.name {
-						@apply flex flex-col justify-between;
+						@apply flex flex-col pb-0 lg:pb-8 justify-between space-y-5 lg:space-y-0;
 
 						h1 {
 							@apply text-3xl font-bold;
@@ -266,7 +266,7 @@ main {
 					}
 
 					.actions {
-						@apply flex flex-col justify-between space-y-12 lg:space-y-0;
+						@apply flex flex-col justify-between space-y-5 lg:space-y-0;
 
 						.stack {
 							@apply flex flex-wrap;
