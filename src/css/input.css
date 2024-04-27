@@ -7,7 +7,7 @@
   --text: rgb(193 197 208);
   --textMedium: rgba(193, 197, 208, 0.5);
   --purple: rgb(107 92 229);
-  --bgProject: rgba(28,61,96,.7);
+  --bgProject: #4e4e4e;
   --tertiary: #275586;
   --primary: rgb(193 211 230);
   --bgHighlight:rgb(29 29 29);
@@ -74,7 +74,7 @@
 	html,
 	body {
 		font-family: 'Bricolage Grotesque', sans-serif;
-		background-color: #181A20;
+		background-color: #1b1b1b;
 		color: var(--text);
 	}
 
@@ -281,7 +281,7 @@ main {
 					}
 
 					img {
-						@apply w-full h-[350px] m-auto object-cover smooth border-4 border-[#e5e7eb] rounded-sm;
+						@apply w-full h-[350px] m-auto object-cover smooth border-2 border-[#858585] rounded-sm;
 
 						animation-delay: .15s;
 						animation-timing-function: cubic-bezier(.165,.84,.44,1);
@@ -366,7 +366,7 @@ footer {
 		}
 
 		.details {
-			@apply max-w-[650px] mx-auto relative z-10 bg-[#181A20];
+			@apply max-w-[650px] mx-auto relative z-10 bg-[#1b1b1b];
 
 			&.animate {
 				animation-delay: .2s;
