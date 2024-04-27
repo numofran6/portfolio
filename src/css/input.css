@@ -167,8 +167,21 @@ header {
 		@apply fixed inset-0 text-[var(--text)] p-10 hidden flex-col items-center justify-center text-2xl font-semibold space-y-10 z-40
 		bg-[#1B324C];
 
+		animation-timing-function: cubic-bezier(.25,.46,.45,.94);
+		animation-name: AuxFadeIn;
+		animation-duration: 1s;
+		animation-fill-mode: both;
+		opacity: 0;
+
 		a {
-			@apply text-4xl;
+			@apply text-4xl hover:text-[var(--pink)] transition-colors duration-300 ease-in-out;
+
+			animation-delay: .3s;
+			animation-timing-function: cubic-bezier(.165,.84,.44,1);
+			animation-name: AuxFadeInUp;
+			animation-duration: 1s;
+			animation-fill-mode: both;
+			opacity: 0;
 		}
 	}
 
@@ -180,15 +193,33 @@ header {
 		@apply min-h-screen flex flex-col md:justify-center pt-[5.8rem] max-w-container;
 
 		.info {
-			@apply grid md:grid-cols-2 gap-10;
+			@apply grid lg:grid-cols-2 gap-10;
+
+			h1 {
+				animation-timing-function: cubic-bezier(.165,.84,.44,1);
+				animation-name: AuxFadeInLeft1;
+				animation-duration: 1s;
+				animation-fill-mode: both;
+				opacity: 0;
+			}
 
 			> div {
 				@apply space-y-5;
+				animation-delay: .3s;
+				animation-timing-function: cubic-bezier(.165,.84,.44,1);
+				animation-name: AuxFadeInUp;
+				animation-duration: 1s;
+				animation-fill-mode: both;
+				opacity: 0;
 
 				.links {
 					@apply flex items-center space-x-4;
 				}
 			}
+		}
+
+		.btn-primary {
+			@apply mt-7 sm:mt-[2.5rem];
 		}
 	}
 }
@@ -250,7 +281,14 @@ main {
 					}
 
 					img {
-						@apply w-[375px] h-[237px] m-auto object-cover smooth border-4 border-[#e5e7eb] rounded-sm;;
+						@apply w-full h-[350px] m-auto object-cover smooth border-4 border-[#e5e7eb] rounded-sm;
+
+						animation-delay: .15s;
+						animation-timing-function: cubic-bezier(.165,.84,.44,1);
+						animation-name: AuxFadeInUp;
+						animation-duration: 1s;
+						animation-fill-mode: both;
+						opacity: 0;
 					}
 				}
 
@@ -280,8 +318,28 @@ main {
 							}
 						}
 					}
+
+					.name, .actions {
+						* {
+							animation-delay: .3s;
+							animation-timing-function: cubic-bezier(.165,.84,.44,1);
+							animation-name: AuxFadeInUp;
+							animation-duration: 1s;
+							animation-fill-mode: both;
+							opacity: 0;
+						}
+					}
 				}
 			}
+		}
+
+		&.animate {
+			animation-delay: .2s;
+			animation-timing-function: cubic-bezier(.165,.84,.44,1);
+			animation-name: AuxFadeInUp;
+			animation-duration: 1s;
+			animation-fill-mode: both;
+			opacity: 0;
 		}
 	}
 }
@@ -310,6 +368,15 @@ footer {
 		.details {
 			@apply max-w-[650px] mx-auto relative z-10 bg-[#181A20];
 
+			&.animate {
+				animation-delay: .2s;
+				animation-timing-function: cubic-bezier(.165,.84,.44,1);
+				animation-name: AuxFadeInUp;
+				animation-duration: 1s;
+				animation-fill-mode: both;
+				opacity: 0;
+			}
+
 			> h1 {
 				font-size: 4.5rem;
 			}
@@ -330,5 +397,37 @@ footer {
 		p {
 			@apply text-sm;
 		}
+	}
+}
+
+@keyframes AuxFadeInUp {
+	0% {
+		opacity: 0;
+		transform: translate3d(0,27px,0);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+
+@keyframes AuxFadeInLeft1 {
+	0% {
+ 	 	opacity: 0;
+		transform: translate3d(-50px,0,0);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes AuxFadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }

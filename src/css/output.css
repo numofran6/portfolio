@@ -613,12 +613,6 @@ html,
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-5 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
-}
-
 .text-left {
   text-align: left;
 }
@@ -1011,9 +1005,36 @@ header {
     color: var(--text);
   }
   .pop-up {
+    animation-timing-function: cubic-bezier(.25,.46,.45,.94);
+    animation-name: AuxFadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    opacity: 0;
     a {
       font-size: 2.25rem;
       line-height: 2.5rem;
+    }
+    a {
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+    a {
+      transition-duration: 300ms;
+    }
+    a {
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    a:hover {
+      color: var(--pink);
+    }
+    a {
+      animation-delay: .3s;
+      animation-timing-function: cubic-bezier(.165,.84,.44,1);
+      animation-name: AuxFadeInUp;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      opacity: 0;
     }
   }
   .pop-up.visible {
@@ -1054,18 +1075,31 @@ header {
     .info {
       gap: 2.5rem;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .info {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
     .info {
+      h1 {
+        animation-timing-function: cubic-bezier(.165,.84,.44,1);
+        animation-name: AuxFadeInLeft1;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        opacity: 0;
+      }
       > div > :not([hidden]) ~ :not([hidden]) {
         --tw-space-y-reverse: 0;
         margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
         margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
       }
       > div {
+        animation-delay: .3s;
+        animation-timing-function: cubic-bezier(.165,.84,.44,1);
+        animation-name: AuxFadeInUp;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        opacity: 0;
         .links {
           display: flex;
         }
@@ -1077,6 +1111,14 @@ header {
           margin-right: calc(1rem * var(--tw-space-x-reverse));
           margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
         }
+      }
+    }
+    .btn-primary {
+      margin-top: 1.75rem;
+    }
+    @media (min-width: 640px) {
+      .btn-primary {
+        margin-top: 2.5rem;
       }
     }
   }
@@ -1385,10 +1427,10 @@ main {
             margin: auto;
           }
           img {
-            height: 237px;
+            height: 350px;
           }
           img {
-            width: 375px;
+            width: 100%;
           }
           img {
             border-radius: 0.125rem;
@@ -1414,6 +1456,14 @@ main {
           }
           img {
             transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+          }
+          img {
+            animation-delay: .15s;
+            animation-timing-function: cubic-bezier(.165,.84,.44,1);
+            animation-name: AuxFadeInUp;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            opacity: 0;
           }
         }
         .description {
@@ -1536,8 +1586,26 @@ main {
               }
             }
           }
+          .name, .actions {
+            * {
+              animation-delay: .3s;
+              animation-timing-function: cubic-bezier(.165,.84,.44,1);
+              animation-name: AuxFadeInUp;
+              animation-duration: 1s;
+              animation-fill-mode: both;
+              opacity: 0;
+            }
+          }
         }
       }
+    }
+    &.animate {
+      animation-delay: .2s;
+      animation-timing-function: cubic-bezier(.165,.84,.44,1);
+      animation-name: AuxFadeInUp;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      opacity: 0;
     }
   }
 }
@@ -1616,6 +1684,14 @@ footer {
       background-color: rgb(24 26 32 / var(--tw-bg-opacity));
     }
     .details {
+      &.animate {
+        animation-delay: .2s;
+        animation-timing-function: cubic-bezier(.165,.84,.44,1);
+        animation-name: AuxFadeInUp;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        opacity: 0;
+      }
       > h1 {
         font-size: 4.5rem;
       }
@@ -1712,6 +1788,48 @@ footer {
       font-size: 0.875rem;
       line-height: 1.25rem;
     }
+  }
+}
+
+@keyframes AuxFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,27px,0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes AuxFadeInLeft1 {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50px,0,0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes AuxFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 640px) {
+  .sm\:space-y-5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
   }
 }
 

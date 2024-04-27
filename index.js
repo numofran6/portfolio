@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const projectLinks = document.querySelectorAll('.project-nav a');
 	const projectInfo = document.querySelector('.project-info');
 	const tourBuddy = projectInfo.querySelector('#tour-buddy');
-	const greenShop = projectInfo.querySelector('#elegante-shop');
+	const eleganteShop = projectInfo.querySelector('#elegante-shop');
 	const churchBlog = projectInfo.querySelector('#church-blog');
 	const bookingApp = projectInfo.querySelector('#tricia-kissi');
 
@@ -40,25 +40,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			if (currentLink === 'tour-buddy') {
 				tourBuddy.classList.add('visible');
-				greenShop.classList.remove('visible');
+				eleganteShop.classList.remove('visible');
 				churchBlog.classList.remove('visible');
 				bookingApp.classList.remove('visible');
 			} else if (currentLink === 'elegante-shop') {
 				tourBuddy.classList.remove('visible');
-				greenShop.classList.add('visible');
+				eleganteShop.classList.add('visible');
 				churchBlog.classList.remove('visible');
 				bookingApp.classList.remove('visible');
 			} else if (currentLink === 'church-blog') {
 				tourBuddy.classList.remove('visible');
-				greenShop.classList.remove('visible');
+				eleganteShop.classList.remove('visible');
 				churchBlog.classList.add('visible');
 				bookingApp.classList.remove('visible');
 			} else if (currentLink === 'tricia-kissi') {
 				tourBuddy.classList.remove('visible');
-				greenShop.classList.remove('visible');
+				eleganteShop.classList.remove('visible');
 				churchBlog.classList.remove('visible');
 				bookingApp.classList.add('visible');
 			}
 		});
 	});
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('animate');
+			} else {
+				entry.target.classList.remove('animate');
+			}
+		});
+	});
+
+	const animatableElements = document.querySelectorAll('.will-animate');
+	animatableElements.forEach((el) => observer.observe(el));
 });
