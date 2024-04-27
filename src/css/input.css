@@ -268,11 +268,11 @@ main {
 				}
 
 				.image, .description .name, .description .actions {
-					@apply p-8 lg:bg-[var(--bgProject)] rounded-3xl;
+					@apply p-8 lg:bg-[var(--bgProject)];
 				}
 
 				.image {
-					@apply flex items-center border border-transparent hover:border-[var(--pink)] smooth bg-[var(--bgProject)];
+					@apply flex items-center border border-[#858585] hover:border-[var(--pink)] smooth bg-[var(--bgProject)];
 
 					&:hover {
 						img {
@@ -293,10 +293,10 @@ main {
 				}
 
 				.description {
-					@apply lg:grid lg:grid-rows-2 lg:gap-5 bg-[var(--bgProject)] lg:bg-transparent rounded-3xl lg:rounded-none;
+					@apply lg:grid lg:grid-rows-2 border border-[#858585] lg:border-none lg:gap-5 bg-[var(--bgProject)] lg:bg-transparent;
 
 					.name {
-						@apply flex flex-col pb-0 lg:pb-8 justify-between space-y-5 lg:space-y-0;
+						@apply flex flex-col pb-0 lg:pb-8 justify-between lg:border border-[#858585] space-y-5 lg:space-y-0;
 
 						h1 {
 							@apply text-3xl font-bold;
@@ -304,7 +304,7 @@ main {
 					}
 
 					.actions {
-						@apply flex flex-col justify-between space-y-5 lg:space-y-0;
+						@apply flex flex-col justify-between space-y-5 lg:space-y-0 lg:border border-[#858585];
 
 						.stack {
 							@apply flex flex-wrap;

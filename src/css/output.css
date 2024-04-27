@@ -1376,9 +1376,6 @@ main {
           display: grid;
         }
         .image, .description .name, .description .actions {
-          border-radius: 1.5rem;
-        }
-        .image, .description .name, .description .actions {
           padding: 2rem;
         }
         @media (min-width: 1024px) {
@@ -1396,7 +1393,8 @@ main {
           border-width: 1px;
         }
         .image {
-          border-color: transparent;
+          --tw-border-opacity: 1;
+          border-color: rgb(133 133 133 / var(--tw-border-opacity));
         }
         .image {
           background-color: var(--bgProject);
@@ -1467,7 +1465,11 @@ main {
           }
         }
         .description {
-          border-radius: 1.5rem;
+          border-width: 1px;
+        }
+        .description {
+          --tw-border-opacity: 1;
+          border-color: rgb(133 133 133 / var(--tw-border-opacity));
         }
         .description {
           background-color: var(--bgProject);
@@ -1489,7 +1491,7 @@ main {
         }
         @media (min-width: 1024px) {
           .description {
-            border-radius: 0px;
+            border-style: none;
           }
         }
         @media (min-width: 1024px) {
@@ -1513,6 +1515,10 @@ main {
             margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
           }
           .name {
+            --tw-border-opacity: 1;
+            border-color: rgb(133 133 133 / var(--tw-border-opacity));
+          }
+          .name {
             padding-bottom: 0px;
           }
           @media (min-width: 1024px) {
@@ -1520,6 +1526,11 @@ main {
               --tw-space-y-reverse: 0;
               margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
               margin-bottom: calc(0px * var(--tw-space-y-reverse));
+            }
+          }
+          @media (min-width: 1024px) {
+            .name {
+              border-width: 1px;
             }
           }
           @media (min-width: 1024px) {
@@ -1550,11 +1561,20 @@ main {
             margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
             margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
           }
+          .actions {
+            --tw-border-opacity: 1;
+            border-color: rgb(133 133 133 / var(--tw-border-opacity));
+          }
           @media (min-width: 1024px) {
             .actions > :not([hidden]) ~ :not([hidden]) {
               --tw-space-y-reverse: 0;
               margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
               margin-bottom: calc(0px * var(--tw-space-y-reverse));
+            }
+          }
+          @media (min-width: 1024px) {
+            .actions {
+              border-width: 1px;
             }
           }
           .actions {
