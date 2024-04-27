@@ -950,12 +950,18 @@ header {
     }
     &.visible {
       > div {
+        a {
+          color: #242424;
+        }
         button {
           .fa-bars {
             display: none;
           }
           .fa-xmark {
             display: block;
+          }
+          .fa-xmark {
+            color: #242424;
           }
         }
       }
@@ -989,7 +995,7 @@ header {
   }
   .pop-up {
     --tw-bg-opacity: 1;
-    background-color: rgb(27 50 76 / var(--tw-bg-opacity));
+    background-color: rgb(133 133 133 / var(--tw-bg-opacity));
   }
   .pop-up {
     padding: 2.5rem;
@@ -1002,14 +1008,15 @@ header {
     font-weight: 600;
   }
   .pop-up {
-    color: var(--text);
+    --tw-text-opacity: 1;
+    color: rgb(36 36 36 / var(--tw-text-opacity));
   }
   .pop-up {
-    animation-timing-function: cubic-bezier(.25,.46,.45,.94);
-    animation-name: AuxFadeIn;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    opacity: 0;
+    /* animation-timing-function: cubic-bezier(.25,.46,.45,.94);
+		animation-name: AuxFadeIn;
+		animation-duration: 1s;
+		animation-fill-mode: both;
+		opacity: 0; */
     a {
       font-size: 2.25rem;
       line-height: 2.5rem;

@@ -150,6 +150,10 @@ header {
 
 		&.visible {
 			> div {
+				a {
+					color: #242424;
+				}
+
 				button {
 					.fa-bars {
 						@apply hidden;
@@ -157,6 +161,7 @@ header {
 
 					.fa-xmark {
 						@apply block;
+						color: #242424;
 					}
 				}
 			}
@@ -164,14 +169,14 @@ header {
 	}
 
 	.pop-up {
-		@apply fixed inset-0 text-[var(--text)] p-10 hidden flex-col items-center justify-center text-2xl font-semibold space-y-10 z-40
-		bg-[#1B324C];
+		@apply fixed inset-0 text-[#242424] p-10 hidden flex-col items-center justify-center text-2xl font-semibold space-y-10 z-40
+		bg-[#858585];
 
-		animation-timing-function: cubic-bezier(.25,.46,.45,.94);
+		/* animation-timing-function: cubic-bezier(.25,.46,.45,.94);
 		animation-name: AuxFadeIn;
 		animation-duration: 1s;
 		animation-fill-mode: both;
-		opacity: 0;
+		opacity: 0; */
 
 		a {
 			@apply text-4xl hover:text-[var(--pink)] transition-colors duration-300 ease-in-out;
