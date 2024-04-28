@@ -1553,6 +1553,22 @@ main {
             h1 {
               font-weight: 700;
             }
+            h1 {
+              a {
+                transition-property: all;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                transition-duration: 150ms;
+              }
+              a {
+                transition-duration: 300ms;
+              }
+              a {
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+              }
+              &:hover a {
+                color: var(--pink) !important;
+              }
+            }
           }
           .actions {
             display: flex;

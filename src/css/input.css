@@ -305,6 +305,14 @@ main {
 
 						h1 {
 							@apply text-3xl font-bold;
+
+							a {
+								@apply transition-all duration-300 ease-in-out;
+							}
+
+							&:hover a {
+								color: var(--pink) !important;
+							}
 						}
 					}
 
