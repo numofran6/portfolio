@@ -277,7 +277,7 @@ main {
 				}
 
 				.image {
-					@apply flex items-center border border-[#858585] hover:border-[var(--pink)] smooth bg-[var(--bgProject)];
+					@apply px-5 flex items-center border border-[#858585] hover:border-[var(--pink)] smooth bg-[var(--bgProject)];
 
 					&:hover {
 						img {
