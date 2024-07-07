@@ -578,6 +578,14 @@ html,
   margin-bottom: 5rem !important;
 }
 
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -593,6 +601,10 @@ html,
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .items-center {
@@ -613,10 +625,6 @@ html,
   --tw-space-y-reverse: 0;
   margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(5rem * var(--tw-space-y-reverse));
-}
-
-.\!pb-16 {
-  padding-bottom: 4rem !important;
 }
 
 .\!pb-2 {
@@ -812,19 +820,12 @@ html,
 }
 
 .main-title {
-  padding-bottom: 1.25rem;
+  padding-bottom: 2rem;
   font-family: Glimer-Outlined, sans-serif;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 3rem;
+  line-height: 1;
   font-weight: 600;
   color: var(--pink);
-}
-
-@media (min-width: 1024px) {
-  .main-title {
-    font-size: 3rem;
-    line-height: 1;
-  }
 }
 
 .scrollbar-none {
@@ -1045,7 +1046,7 @@ header {
   }
   .pop-up {
     --tw-bg-opacity: 1;
-    background-color: rgb(133 133 133 / var(--tw-bg-opacity));
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   }
   .pop-up {
     padding: 2.5rem;
@@ -1058,15 +1059,9 @@ header {
     font-weight: 600;
   }
   .pop-up {
-    --tw-text-opacity: 1;
-    color: rgb(36 36 36 / var(--tw-text-opacity));
+    color: var(--text);
   }
   .pop-up {
-    /* animation-timing-function: cubic-bezier(.25,.46,.45,.94);
-		animation-name: AuxFadeIn;
-		animation-duration: 1s;
-		animation-fill-mode: both;
-		opacity: 0; */
     a {
       font-size: 2.25rem;
       line-height: 2.5rem;
@@ -1144,6 +1139,16 @@ header {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
+    @media (min-width: 1024px) {
+      .info {
+        gap: 5rem;
+      }
+    }
+    @media (min-width: 1280px) {
+      .info {
+        gap: 2.5rem;
+      }
+    }
     .info {
       h1 {
         animation-timing-function: cubic-bezier(.165,.84,.44,1);
@@ -1190,6 +1195,15 @@ header {
 
 main {
   width: 100%;
+  .skill-list {
+    display: flex;
+  }
+  .skill-list {
+    flex-wrap: wrap;
+  }
+  .skill-list {
+    gap: 0.5rem;
+  }
   .skill-list {
     span {
       border-radius: 9999px;
@@ -1249,11 +1263,6 @@ main {
     .project-nav {
       align-items: flex-end;
     }
-    .project-nav > :not([hidden]) ~ :not([hidden]) {
-      --tw-space-x-reverse: 0;
-      margin-right: calc(1.25rem * var(--tw-space-x-reverse));
-      margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
-    }
     .project-nav {
       overflow-x: scroll;
     }
@@ -1265,7 +1274,7 @@ main {
       padding-right: 8px;
     }
     .project-nav {
-      padding-bottom: 1.25rem;
+      padding-bottom: 1rem;
     }
     .project-nav {
       scrollbar-width: none;
@@ -1391,10 +1400,22 @@ main {
           display: block;
           background-color: #00000010;
           position: absolute;
-          top: 0;
-          bottom: 0;
-          width: 1px;
-          right: 0;
+        }
+        @media (max-width: 1024px) {
+          &::before {
+            top: 100%;
+            height: 1px;
+            left: 0;
+            right: 0;
+          }
+        }
+        @media (min-width: 1024px) {
+          &::before {
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            right: 0;
+          }
         }
         &.active {
           --tw-bg-opacity: 1;
@@ -1409,25 +1430,23 @@ main {
         &.active {
           &::before {
             background-color: var(--pink);
-            width: 2px;
+          }
+          @media (max-width: 1024px) {
+            &::before {
+              height: 2px;
+            }
+          }
+          @media (min-width: 1024px) {
+            &::before {
+              width: 2px;
+            }
           }
         }
       }
     }
     .project-info {
-      border-top-width: 1px;
-    }
-    .project-info {
-      border-color: #00000020;
-    }
-    @media (min-width: 1024px) {
-      .project-info {
-        border-width: 0px;
-      }
-    }
-    .project-info {
       .project {
-        margin-top: 2.5rem;
+        margin-top: 0.75rem;
       }
       .project {
         display: none;
@@ -1500,6 +1519,9 @@ main {
           img {
             transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
           }
+          img:hover {
+            border-color: var(--pink);
+          }
           img {
             animation-delay: .15s;
             animation-timing-function: cubic-bezier(.165,.84,.44,1);
@@ -1514,9 +1536,6 @@ main {
         }
         .description {
           border-color: #00000020;
-        }
-        .description {
-          background-color: var(--bgProject);
         }
         @media (min-width: 1024px) {
           .description {
@@ -1723,8 +1742,14 @@ footer {
       z-index: 10;
     }
     .details {
-      padding-top: 12rem;
-      padding-bottom: 12rem;
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+    @media (min-width: 768px) {
+      .details {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+      }
     }
     .details {
       &.animate {
@@ -1882,6 +1907,10 @@ footer {
 }
 
 @media (min-width: 640px) {
+  .sm\:mt-0 {
+    margin-top: 0px;
+  }
+
   .sm\:space-y-5 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1902,5 +1931,9 @@ footer {
 @media (min-width: 1024px) {
   .lg\:h-full {
     height: 100%;
+  }
+
+  .lg\:\!pb-16 {
+    padding-bottom: 4rem !important;
   }
 }
