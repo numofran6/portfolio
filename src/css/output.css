@@ -586,10 +586,6 @@ html,
   margin-top: 2.5rem;
 }
 
-.mt-3 {
-  margin-top: 0.75rem;
-}
-
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -1504,7 +1500,7 @@ main {
             margin: auto;
           }
           img {
-            height: 440px;
+            height: 300px;
           }
           img {
             width: 100%;
@@ -1535,6 +1531,11 @@ main {
           }
           img:hover {
             border-color: var(--pink);
+          }
+          @media (min-width: 1024px) {
+            img {
+              height: 440px;
+            }
           }
           img {
             animation-delay: .15s;
