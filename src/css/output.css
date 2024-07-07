@@ -702,8 +702,18 @@ html,
   margin-left: auto;
   margin-right: auto;
   max-width: 75rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .max-w-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.max-w-container {
   border-left: 1px;
   border-right: 1px;
   border-color: #00000020;
@@ -904,8 +914,14 @@ header {
       max-width: 75rem;
     }
     > div {
-      padding-left: 3rem;
-      padding-right: 3rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      > div {
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
     }
     > div {
       border-left: 1px;
@@ -1122,8 +1138,14 @@ header {
     max-width: 75rem;
   }
   .hero {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .hero {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
   }
   .hero {
     border-left: 1px;
@@ -1246,8 +1268,14 @@ main {
     max-width: 75rem;
   }
   .projects {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .projects {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
   }
   .projects {
     border-left: 1px;
@@ -1874,8 +1902,14 @@ footer {
     max-width: 75rem;
   }
   nav {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    nav {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
   }
   nav {
     border-left: 1px;

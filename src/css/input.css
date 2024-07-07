@@ -24,7 +24,7 @@
 }
 
 .max-w-container {
-	@apply max-w-[75rem] mx-auto px-12;
+	@apply max-w-[75rem] mx-auto px-6 md:px-12;
 
 	border-left: 1px;
 	border-right: 1px;
