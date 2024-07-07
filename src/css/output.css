@@ -1532,6 +1532,11 @@ main {
           img:hover {
             border-color: var(--pink);
           }
+          @media (min-width: 768px) {
+            img {
+              height: 350px;
+            }
+          }
           @media (min-width: 1024px) {
             img {
               height: 440px;

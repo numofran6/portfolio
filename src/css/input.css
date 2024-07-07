@@ -322,7 +322,7 @@ main {
 					/* @apply smooth; */
 
 					img {
-						@apply w-full h-[300px] lg:h-[440px] m-auto object-cover smooth border border-[#00000020] rounded-sm hover:border-[var(--pink)];
+						@apply w-full h-[300px] md:h-[350px] lg:h-[440px] m-auto object-cover smooth border border-[#00000020] rounded-sm hover:border-[var(--pink)];
 
 						animation-delay: .15s;
 						animation-timing-function: cubic-bezier(.165,.84,.44,1);
