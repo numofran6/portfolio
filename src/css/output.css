@@ -578,32 +578,12 @@ html,
   margin-bottom: 5rem !important;
 }
 
-.ml-3 {
-  margin-left: 0.75rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
+.ml-4 {
+  margin-left: 1rem;
 }
 
 .mt-5 {
   margin-top: 1.25rem;
-}
-
-.mt-7 {
-  margin-top: 1.75rem;
-}
-
-.mt-8 {
-  margin-top: 2rem;
-}
-
-.ml-5 {
-  margin-left: 1.25rem;
-}
-
-.ml-4 {
-  margin-left: 1rem;
 }
 
 .inline-block {
@@ -899,12 +879,6 @@ header {
     z-index: 50;
   }
   nav {
-    border-bottom-width: 1px;
-  }
-  nav {
-    border-color: #00000020;
-  }
-  nav {
     --tw-backdrop-blur: blur(12px);
     -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
             backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -921,6 +895,12 @@ header {
     }
     > div {
       justify-content: space-between;
+    }
+    > div {
+      border-bottom-width: 1px;
+    }
+    > div {
+      border-color: #00000020;
     }
     > div {
       margin-left: auto;
