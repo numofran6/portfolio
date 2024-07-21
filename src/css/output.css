@@ -449,7 +449,7 @@ video {
 html,
 	body {
   font-family: 'Bricolage Grotesque', sans-serif;
-  background: #fff;
+  background: var(--bg);
   color: var(--text);
 }
 
@@ -661,15 +661,16 @@ html,
 }
 
 :root {
-  --pink: rgb(234 76 137);
-  --text: #292929;
-  --textMedium: rgba(193, 197, 208, 0.5);
+  --pink: #671cc9;
+  --lightAccent: #f4edfca1;
+  --text: #283252;
   --purple: rgb(107 92 229);
   --bgProject: #4e4e4e;
   --tertiary: #275586;
   --primary: #292929;
   --bgHighlight:rgb(29 29 29);
   --blue: rgb(68 157 209);
+  --bg: #fff;
 }
 
 @font-face {
@@ -705,7 +706,7 @@ html,
   border-right: 1px;
   border-color: #00000020;
   border-style: solid;
-  background-color: #FFF;
+  background-color: var(--bg);
 }
 
 .nav-link {
@@ -733,7 +734,7 @@ html,
   justify-content: center;
   border-radius: 9999px;
   border-width: 1px;
-  border-color: var(--primary);
+  border-color: #00000020;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   padding-left: 1.5rem;
@@ -779,7 +780,7 @@ html,
   justify-content: center;
   border-radius: 9999px;
   border-width: 1px;
-  border-color: var(--text);
+  border-color: #00000020;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1.25rem;
@@ -915,7 +916,7 @@ header {
       border-right: 1px;
       border-color: #00000020;
       border-style: solid;
-      background-color: #FFF;
+      background-color: var(--bg);
     }
     > div {
       a {
@@ -1139,7 +1140,7 @@ header {
     border-right: 1px;
     border-color: #00000020;
     border-style: solid;
-    background-color: #FFF;
+    background-color: var(--bg);
   }
   @media (min-width: 768px) {
     .hero {
@@ -1269,7 +1270,7 @@ main {
     border-right: 1px;
     border-color: #00000020;
     border-style: solid;
-    background-color: #FFF;
+    background-color: var(--bg);
   }
   @media (min-width: 1024px) {
     .projects {
@@ -1443,8 +1444,7 @@ main {
           }
         }
         &.active {
-          --tw-bg-opacity: 1;
-          background-color: rgb(244 244 245 / var(--tw-bg-opacity));
+          background-color: var(--lightAccent);
         }
         &.active {
           color: var(--pink);
@@ -1511,6 +1511,22 @@ main {
         }
         .image {
           /* @apply smooth; */
+        }
+        .image {
+          transition-property: all;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: 150ms;
+        }
+        .image {
+          transition-duration: 300ms;
+        }
+        .image {
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .image:hover {
+          opacity: 0.8;
+        }
+        .image {
           img {
             margin: auto;
           }
@@ -1543,9 +1559,6 @@ main {
           }
           img {
             transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-          }
-          img:hover {
-            border-color: var(--pink);
           }
           @media (min-width: 768px) {
             img {
@@ -1903,7 +1916,7 @@ footer {
     border-right: 1px;
     border-color: #00000020;
     border-style: solid;
-    background-color: #FFF;
+    background-color: var(--bg);
   }
   nav {
     p {

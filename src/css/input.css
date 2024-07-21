@@ -3,15 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --pink: rgb(234 76 137);
-  --text: #292929;
-  --textMedium: rgba(193, 197, 208, 0.5);
+  --pink: #671cc9;
+  --lightAccent: #f4edfca1;
+  --text: #283252;
   --purple: rgb(107 92 229);
   --bgProject: #4e4e4e;
   --tertiary: #275586;
   --primary: #292929;
   --bgHighlight:rgb(29 29 29);
   --blue: rgb(68 157 209);
+  --bg: #fff;
 }
 
 @font-face {
@@ -31,7 +32,7 @@
 	border-color: #00000020;
 	border-style: solid;
 
-	background-color: #FFF;
+	background-color: var(--bg);
 }
 
 .nav-link {
@@ -42,11 +43,11 @@
 	@apply rounded-full w-fit text-[var(--primary)] hover:border-[var(--pink)] hover:text-[var(--pink)] 
 	transition duration-500 ease-in-out font-medium 
 	border-[1px] focus:outline-none flex items-center justify-center 
-	border-[var(--primary)] py-3 px-6 text-lg xl:text-xl 2xl:text-2xl my-10;
+	border-[#00000020] py-3 px-6 text-lg xl:text-xl 2xl:text-2xl my-10;
 }
 
 .icon-container {
-	@apply rounded-full flex justify-center items-center border-[1px] border-[var(--text)] transition duration-500 ease-in-out py-2 px-5 hover:border-[var(--pink)];
+	@apply rounded-full flex justify-center items-center border-[1px] border-[#00000020] transition duration-500 ease-in-out py-2 px-5 hover:border-[var(--pink)];
 }
 
 .project-icon {
@@ -85,7 +86,7 @@
 	html,
 	body {
 		font-family: 'Bricolage Grotesque', sans-serif;
-		background: #fff;
+		background: var(--bg);
 		color: var(--text);
 	}
 
@@ -284,7 +285,7 @@ main {
 				}
 
 				&.active {
-					@apply text-[var(--pink)] hover:text-[var(--pink)] bg-[#F4F4F5];
+					@apply text-[var(--pink)] hover:text-[var(--pink)] bg-[var(--lightAccent)];
 
 					&::before {
 						background-color: var(--pink);
@@ -320,9 +321,10 @@ main {
 
 				.image {
 					/* @apply smooth; */
+					@apply hover:opacity-80 transition-all duration-300 ease-in-out;
 
 					img {
-						@apply w-full h-[300px] md:h-[350px] lg:h-[440px] m-auto object-cover smooth border border-[#00000020] rounded-sm hover:border-[var(--pink)];
+						@apply w-full h-[300px] md:h-[350px] lg:h-[440px] m-auto object-cover smooth border border-[#00000020] rounded-sm;
 
 						animation-delay: .15s;
 						animation-timing-function: cubic-bezier(.165,.84,.44,1);
