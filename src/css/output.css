@@ -647,8 +647,8 @@ html,
   line-height: 2rem;
 }
 
-.text-\[3\.5rem\] {
-  font-size: 3.5rem;
+.text-\[3rem\] {
+  font-size: 3rem;
 }
 
 .text-lg {
@@ -822,7 +822,7 @@ html,
 
 .section-title {
   font-family: Glimer-Outlined, sans-serif;
-  font-size: 3.75rem;
+  font-size: 4.5rem;
   line-height: 1;
   font-weight: 600;
   color: var(--pink);
@@ -830,8 +830,13 @@ html,
 
 @media (min-width: 1024px) {
   .section-title {
-    font-size: 6rem;
-    line-height: 1;
+    font-size: 5.9rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-title {
+    font-size: 6.3rem;
   }
 }
 
@@ -1227,10 +1232,15 @@ header {
 
 #services > div {
   h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
   h1 {
     text-transform: uppercase;
+  }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3.5rem;
+    }
   }
   .skills {
     padding-bottom: 0.75rem;
@@ -2022,6 +2032,10 @@ footer {
 @media (min-width: 768px) {
   .md\:\!mb-0 {
     margin-bottom: 0px !important;
+  }
+
+  .md\:text-\[3\.5rem\] {
+    font-size: 3.5rem;
   }
 
   .md\:font-bold {

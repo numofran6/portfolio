@@ -64,7 +64,7 @@
 }
 
 .section-title {
-	@apply text-[var(--pink)] font-semibold text-6xl lg:text-8xl font-Glimer-Outlined;
+	@apply text-[var(--pink)] font-semibold text-7xl lg:text-[5.9rem] xl:text-[6.3rem] font-Glimer-Outlined;
 }
 
 .main-title {
@@ -242,7 +242,7 @@ header {
 
 #services > div {
 	h1 {
-		@apply text-[3.2rem] uppercase;
+		@apply text-[3rem] md:text-[3.5rem] uppercase;
 	}
 
 	.skills {
