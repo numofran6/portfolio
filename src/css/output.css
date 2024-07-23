@@ -638,10 +638,6 @@ html,
   text-align: left;
 }
 
-.font-Glimer-Bold {
-  font-family: Glimer-Bold, sans-serif;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -822,8 +818,7 @@ html,
 
 .section-title {
   font-family: Glimer-Outlined, sans-serif;
-  font-size: 4.5rem;
-  line-height: 1;
+  font-size: 4.1rem;
   font-weight: 600;
   color: var(--pink);
 }
@@ -838,6 +833,10 @@ html,
   .section-title {
     font-size: 6.3rem;
   }
+}
+
+.section-title {
+  line-height: 1;
 }
 
 .main-title {

@@ -64,7 +64,9 @@
 }
 
 .section-title {
-	@apply text-[var(--pink)] font-semibold text-7xl lg:text-[5.9rem] xl:text-[6.3rem] font-Glimer-Outlined;
+	@apply text-[var(--pink)] font-semibold text-[4.1rem] lg:text-[5.9rem] xl:text-[6.3rem] font-Glimer-Outlined;
+
+	line-height: 1;
 }
 
 .main-title {
