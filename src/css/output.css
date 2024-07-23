@@ -638,13 +638,17 @@ html,
   text-align: left;
 }
 
+.font-Glimer-Bold {
+  font-family: Glimer-Bold, sans-serif;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
 }
 
-.text-\[5rem\] {
-  font-size: 5rem;
+.text-\[3\.5rem\] {
+  font-size: 3.5rem;
 }
 
 .text-lg {
@@ -654,6 +658,10 @@ html,
 
 .font-bold {
   font-weight: 700;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .ease-in-out {
@@ -677,6 +685,12 @@ html,
   font-family: 'Glimer-Outlined';
 
   src: url(../../assets/Gilmer-Font/Gilmer\ Outline.otf);
+}
+
+@font-face {
+  font-family: 'Glimer-Bold';
+
+  src: url(../../assets/Gilmer-Font/Gilmer\ Bold.otf);
 }
 
 .smooth {
@@ -824,8 +838,6 @@ html,
 .main-title {
   padding-bottom: 2rem;
   font-family: Glimer-Outlined, sans-serif;
-  font-size: 3rem;
-  line-height: 1;
   font-weight: 600;
   color: var(--pink);
 }
@@ -1213,8 +1225,23 @@ header {
   }
 }
 
+#services > div {
+  h1 {
+    font-size: 3.2rem;
+  }
+  h1 {
+    text-transform: uppercase;
+  }
+  .skills {
+    padding-bottom: 0.75rem;
+  }
+}
+
 main {
   width: 100%;
+  .skill-list {
+    margin-bottom: 4rem;
+  }
   .skill-list {
     display: flex;
   }
@@ -1226,17 +1253,28 @@ main {
   }
   .skill-list {
     span {
-      border-radius: 9999px;
+      cursor: pointer;
+    }
+    span {
+      border-radius: 0.5rem;
+    }
+    span {
+      border-width: 1px;
+    }
+    span {
+      --tw-border-opacity: 1;
+      border-color: rgb(229 229 229 / var(--tw-border-opacity));
     }
     span {
       --tw-bg-opacity: 1;
-      background-color: rgb(244 244 245 / var(--tw-bg-opacity));
-    }
-    span {
-      --tw-bg-opacity: 0.8;
+      background-color: rgb(255 255 255 / var(--tw-bg-opacity));
     }
     span {
       padding: 0.5rem;
+    }
+    span {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
     }
     span {
       font-size: 1rem;
@@ -1246,6 +1284,15 @@ main {
     }
     span {
       color: var(--text);
+    }
+    span {
+      transition: all .3s;
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: -1px 3px 10px 0 rgba(0,0,0,.06);
+        border-color: var(--pink);
+        color: var(--pink);
+      }
     }
   }
   .projects {
@@ -1987,7 +2034,7 @@ footer {
     height: 100%;
   }
 
-  .lg\:\!pb-16 {
-    padding-bottom: 4rem !important;
+  .lg\:\!pb-10 {
+    padding-bottom: 2.5rem !important;
   }
 }

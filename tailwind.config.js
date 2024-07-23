@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         "Glimer-Outlined": ["Glimer-Outlined", "sans-serif"],
+        "Glimer-Bold": ["Glimer-Bold", "sans-serif"],
       },
 
       boxShadow: {

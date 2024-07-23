@@ -20,6 +20,11 @@
 	src: url(../../assets/Gilmer-Font/Gilmer\ Outline.otf);
 }
 
+@font-face {
+	font-family: 'Glimer-Bold';
+	src: url(../../assets/Gilmer-Font/Gilmer\ Bold.otf);
+}
+
 .smooth {
 	@apply transition-all ease-in duration-300;
 }
@@ -63,7 +68,7 @@
 }
 
 .main-title {
-	@apply text-[var(--pink)]  pb-8 font-semibold text-5xl font-Glimer-Outlined;
+	@apply text-[var(--pink)] pb-8 font-semibold font-Glimer-Outlined;
 }
 
 .scrollbar-none {
@@ -235,14 +240,33 @@ header {
 	}
 }
 
+#services > div {
+	h1 {
+		@apply text-[3.2rem] uppercase;
+	}
+
+	.skills {
+		@apply pb-3;
+	}
+}
+
 main {
 	@apply w-full;
 
 	.skill-list {
-		@apply flex flex-wrap gap-2;
+		@apply flex flex-wrap gap-2 mb-16;
 
 		span {
-			@apply text-[1rem] p-2 font-semibold text-[var(--text)] bg-[#F4F4F5] bg-opacity-80 rounded-full;
+			@apply text-[1rem] p-2 px-3 font-semibold text-[var(--text)] bg-[#fff] rounded-lg border border-[#e5e5e5] cursor-pointer;
+
+			transition: all .3s;
+
+			&:hover {
+				transform: translateY(-5px);
+				box-shadow: -1px 3px 10px 0 rgba(0,0,0,.06);
+				border-color: var(--pink);
+				color: var(--pink);
+			}
 		}
 	}
 
