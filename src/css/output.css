@@ -1131,7 +1131,7 @@ header {
     display: flex;
   }
   .hero {
-    min-height: 100vh;
+    min-height: 680px;
   }
   .hero {
     flex-direction: column;

@@ -208,7 +208,7 @@ header {
 	}
 
 	.hero {
-		@apply min-h-screen flex flex-col md:justify-center pt-[5.8rem] max-w-container;
+		@apply min-h-[680px] flex flex-col md:justify-center pt-[5.8rem] max-w-container;
 
 		.info {
 			@apply grid lg:grid-cols-2 gap-10 lg:gap-20 xl:gap-10;
