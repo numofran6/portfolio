@@ -1249,6 +1249,13 @@ header {
 
 #services > div {
   h1 {
+    animation-timing-function: cubic-bezier(.165,.84,.44,1);
+    animation-name: AuxFadeInLeft1;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    opacity: 0;
+  }
+  h1 {
     font-size: 3rem;
   }
   h1 {
