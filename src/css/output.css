@@ -573,10 +573,6 @@ html,
   margin-bottom: 5rem !important;
 }
 
-.ml-4 {
-  margin-left: 1rem;
-}
-
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -598,8 +594,8 @@ html,
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.list-disc {
-  list-style-type: disc;
+.flex-col {
+  flex-direction: column;
 }
 
 .items-center {
@@ -620,31 +616,50 @@ html,
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-20 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(5rem * var(--tw-space-y-reverse));
+.\!border-l-0 {
+  border-left-width: 0px !important;
+}
+
+.\!border-r-0 {
+  border-right-width: 0px !important;
+}
+
+.\!p-8 {
+  padding: 2rem !important;
 }
 
 .\!pb-0 {
   padding-bottom: 0px !important;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .pb-20 {
   padding-bottom: 5rem;
 }
 
-.pb-5 {
-  padding-bottom: 1.25rem;
+.pb-8 {
+  padding-bottom: 2rem;
 }
 
 .text-left {
   text-align: left;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-\[1\.35rem\] {
@@ -729,7 +744,7 @@ html,
   border-right: 1px;
   border-color: #00000020;
   border-style: solid;
-  background-color: var(--bg);
+  /* background-color: var(--bg); */
 }
 
 .nav-link {
@@ -937,7 +952,7 @@ header {
       border-right: 1px;
       border-color: #00000020;
       border-style: solid;
-      background-color: var(--bg);
+      /* background-color: var(--bg); */
     }
     > div {
       a {
@@ -1161,7 +1176,7 @@ header {
     border-right: 1px;
     border-color: #00000020;
     border-style: solid;
-    background-color: var(--bg);
+    /* background-color: var(--bg); */
   }
   @media (min-width: 768px) {
     .hero {
@@ -1247,7 +1262,25 @@ header {
   }
 }
 
-#services > div {
+#services {
+  border-radius: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 248 248 / var(--tw-bg-opacity));
+  padding: 1.5rem;
+  padding-bottom: 3.5rem;
+  padding-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  #services {
+    border-radius: 0px;
+    padding: 3rem;
+    padding-bottom: 6rem;
+    padding-top: 5rem;
+  }
+}
+
+#services {
   h1 {
     animation-timing-function: cubic-bezier(.165,.84,.44,1);
     animation-name: AuxFadeInLeft1;
@@ -1267,7 +1300,105 @@ header {
     }
   }
   .skills {
-    padding-bottom: 0.75rem;
+    display: flex;
+  }
+  .skills {
+    min-height: 400px;
+  }
+  .skills {
+    flex-direction: column;
+  }
+  .skills {
+    justify-content: space-between;
+  }
+  .skills {
+    gap: 1.25rem;
+  }
+  @media (min-width: 1024px) {
+    .skills {
+      flex-direction: row;
+    }
+  }
+  .skill {
+    border-width: 1px;
+  }
+  .skill {
+    border-color: #00000020;
+  }
+  .skill {
+    padding: 1.25rem;
+  }
+  .cont-1,
+	.cont-2 {
+    flex: 0 0 49%;
+  }
+  .cont-2 {
+    display: flex;
+  }
+  .cont-2 {
+    flex-direction: column;
+  }
+  .cont-2 {
+    gap: 1.25rem;
+  }
+  .cont-2 {
+    .inner {
+      flex: 1;
+      height: 100%;
+    }
+  }
+  .cont-3 {
+    display: flex;
+  }
+  .cont-3 {
+    flex-direction: column;
+  }
+  .cont-3 {
+    gap: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .cont-3 {
+      flex-direction: row;
+    }
+  }
+  .cont-3 {
+    .skill {
+      flex: 1;
+    }
+  }
+  h4 {
+    display: flex;
+  }
+  h4 {
+    flex-direction: column;
+  }
+  h4 {
+    gap: 0.75rem;
+  }
+  .number {
+    font-family: Glimer-Outlined, sans-serif;
+  }
+  .number {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  .number {
+    font-weight: 600;
+  }
+  .number {
+    color: var(--pink);
+  }
+  @media (min-width: 768px) {
+    .number {
+      font-size: 3rem;
+      line-height: 1;
+    }
+  }
+  .title {
+    font-weight: 600;
+  }
+  .title {
+    opacity: 0.9;
   }
 }
 
@@ -1351,7 +1482,7 @@ main {
     border-right: 1px;
     border-color: #00000020;
     border-style: solid;
-    background-color: var(--bg);
+    /* background-color: var(--bg); */
   }
   @media (min-width: 1024px) {
     .projects {
@@ -1997,7 +2128,7 @@ footer {
     border-right: 1px;
     border-color: #00000020;
     border-style: solid;
-    background-color: var(--bg);
+    /* background-color: var(--bg); */
   }
   nav {
     p {
@@ -2056,6 +2187,11 @@ footer {
 @media (min-width: 768px) {
   .md\:\!mb-0 {
     margin-bottom: 0px !important;
+  }
+
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .md\:text-\[3\.5rem\] {
