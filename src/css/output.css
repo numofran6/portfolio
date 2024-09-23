@@ -1456,6 +1456,15 @@ header {
   }
 }
 
+@media screen and (max-width: 400px) {
+  #services .banner {
+    min-height: 300px;
+    background-size: 345px;
+    background-position: 155px 0px;
+    align-items: end;
+  }
+}
+
 main {
   width: 100%;
   .skill-list {
