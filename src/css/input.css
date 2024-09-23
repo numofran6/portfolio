@@ -254,7 +254,7 @@ header {
 
 
 #services {
-	@apply p-6 md:p-12 pb-14 md:pb-24 pt-16 md:pt-20 rounded-xl md:rounded-none;
+	@apply md:p-12 pb-14 md:pb-24 pt-16 md:pt-20 rounded-xl md:rounded-none;
 
 	.banner {
 		background-image: url('../../assets/images/mask.png');
@@ -336,7 +336,7 @@ header {
 	#services .banner {
 		min-height: 300px;
 		background-size: 430px;
-		background-position: 340px 0px;
+		background-position: 388px 0px;
 	}
 }
 
@@ -344,7 +344,7 @@ header {
 	#services .banner {
 		min-height: 300px;
 		background-size: 480px;
-		background-position: 183px 0px;
+		background-position: 232px 0px;
 		align-items: end;
 	}
 }
@@ -352,8 +352,8 @@ header {
 @media screen and (max-width: 575px) {
 	#services .banner {
 		min-height: 300px;
-		background-size: 340px;
-		background-position: 183px 0px;
+		background-size: 425px;
+		background-position: 192px 0px;
 		align-items: end;
 	}
 }
