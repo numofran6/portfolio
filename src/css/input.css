@@ -48,11 +48,11 @@
 	@apply rounded-full w-fit text-[var(--primary)] hover:border-[var(--pink)] hover:text-[var(--pink)] 
 	transition duration-500 ease-in-out font-medium 
 	border-[1px] focus:outline-none flex items-center justify-center 
-	border-[#00000020] py-3 px-6 text-lg xl:text-xl 2xl:text-2xl;
+	border-[#E5E7EB] py-3 px-6 text-lg xl:text-xl 2xl:text-2xl;
 }
 
 .icon-container {
-	@apply rounded-full flex justify-center items-center border-[1px] border-[#00000020] transition duration-500 ease-in-out py-2 px-5 hover:border-[var(--pink)];
+	@apply rounded-full flex justify-center items-center border-[1px] border-[#E5E7EB] transition duration-500 ease-in-out py-2 px-5 hover:border-[var(--pink)];
 }
 
 .project-icon {
@@ -92,7 +92,7 @@
 @layer base {
 	html,
 	body {
-		font-family: 'Bricolage Grotesque', sans-serif;
+		font-family: 'Inter', 'Bricolage Grotesque', sans-serif;
 		background: var(--bg);
 		color: var(--text);
 	}
@@ -254,7 +254,20 @@ header {
 
 
 #services {
-	@apply bg-[#f8f8f8] p-6 md:p-12 pb-14 md:pb-24 pt-16 md:pt-20 rounded-xl md:rounded-none;
+	@apply p-6 md:p-12 pb-14 md:pb-24 pt-16 md:pt-20 rounded-xl md:rounded-none;
+
+	.banner {
+		background-image: url('../../assets/images/mask.png');
+		min-height: 200px;
+		border: 1px solid #E5E7EB;
+		border-radius: 10px;
+		background-position: top right;
+    	background-repeat: no-repeat;
+    	background-size: contain;
+		display: flex;
+		align-items: center;
+		padding: 2rem;
+	}
 
 	h1 {
 		animation-timing-function: cubic-bezier(.165,.84,.44,1);
@@ -262,7 +275,7 @@ header {
 				animation-duration: 1s;
 				animation-fill-mode: both;
 				opacity: 0;
-		@apply text-[3rem] md:text-[3.5rem] uppercase;
+		@apply text-[2.8rem] uppercase;
 	}
 
 	.skills {
@@ -270,7 +283,10 @@ header {
 	}
 
 	.skill {
-		@apply border border-[#00000020] p-5;
+		@apply border border-[#E5E7EB] p-5;
+
+		border-radius: .375rem;
+		background-color: #F8F8F8;
 	}
 
 	.cont-1,
@@ -308,6 +324,40 @@ header {
 	}
 }
 
+@media screen and (max-width: 860px) {
+	#services .banner {
+		min-height: 300px;
+		background-size: 430px;
+		background-position: 430px 0px;
+	}
+}
+
+@media screen and (max-width: 770px) {
+	#services .banner {
+		min-height: 300px;
+		background-size: 430px;
+		background-position: 340px 0px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	#services .banner {
+		min-height: 300px;
+		background-size: 480px;
+		background-position: 183px 0px;
+		align-items: end;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	#services .banner {
+		min-height: 300px;
+		background-size: 340px;
+		background-position: 183px 0px;
+		align-items: end;
+	}
+}
+
 main {
 	@apply w-full;
 
@@ -332,7 +382,7 @@ main {
 		@apply lg:flex lg:gap-10 max-w-container;
 
 		.project-nav {
-			@apply overflow-x-scroll border-[#00000010] scrollbar-none
+			@apply overflow-x-scroll border-[#E5E7EB] scrollbar-none
 			flex items-end fade-x px-[8px] pb-4 sm:pr-0 sm:pl-[12px] lg:pl-0
 			lg:block lg:h-fit lg:text-right lg:w-[9rem] lg:flex-shrink-0 lg:pb-0 lg:space-x-0;
 
@@ -406,7 +456,7 @@ main {
 					@apply hover:opacity-80 transition-all duration-300 ease-in-out;
 
 					img {
-						@apply w-full h-[300px] md:h-[350px] lg:h-[440px] m-auto object-cover smooth border border-[#00000020] rounded-sm;
+						@apply w-full h-[300px] md:h-[350px] lg:h-[440px] m-auto object-cover smooth border border-[#E5E7EB] rounded-sm;
 
 						animation-delay: .15s;
 						animation-timing-function: cubic-bezier(.165,.84,.44,1);
@@ -418,10 +468,10 @@ main {
 				}
 
 				.description {
-					@apply lg:grid lg:grid-rows-2 border border-[#00000020] lg:border-none lg:gap-5 lg:bg-transparent;
+					@apply lg:grid lg:grid-rows-2 border border-[#E5E7EB] lg:border-none lg:gap-5 lg:bg-transparent;
 
 					.name {
-						@apply flex flex-col pb-0 lg:pb-8 justify-between lg:border border-[#00000020] space-y-5 lg:space-y-0;
+						@apply flex flex-col pb-0 lg:pb-8 justify-between lg:border border-[#E5E7EB] space-y-5 lg:space-y-0;
 
 						h1 {
 							@apply text-3xl font-bold;
@@ -437,7 +487,7 @@ main {
 					}
 
 					.actions {
-						@apply flex flex-col justify-between space-y-5 lg:space-y-0 lg:border border-[#00000020];
+						@apply flex flex-col justify-between space-y-5 lg:space-y-0 lg:border border-[#E5E7EB];
 
 						.stack {
 							@apply flex flex-wrap;
@@ -522,6 +572,10 @@ footer {
 			@apply text-sm;
 		}
 	}
+}
+
+.heroskill {
+	@apply px-2 bg-gray-100 font-bold;
 }
 
 @keyframes AuxFadeInUp {
