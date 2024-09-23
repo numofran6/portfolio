@@ -2265,6 +2265,10 @@ footer {
     margin-bottom: 0px !important;
   }
 
+  .md\:\!p-8 {
+    padding: 2rem !important;
+  }
+
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
