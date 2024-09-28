@@ -2275,6 +2275,11 @@ footer {
     padding-right: 0px;
   }
 
+  .md\:\!px-8 {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
   .md\:text-\[3\.5rem\] {
     font-size: 3.5rem;
   }
