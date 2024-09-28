@@ -275,7 +275,7 @@ header {
 				animation-duration: 1s;
 				animation-fill-mode: both;
 				opacity: 0;
-		@apply text-[2.8rem] uppercase;
+		@apply text-[2.8rem] lg:text-[3.5rem] uppercase;
 	}
 
 	.skills {

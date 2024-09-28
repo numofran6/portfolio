@@ -620,10 +620,6 @@ html,
   border-right-width: 0px !important;
 }
 
-.\!p-8 {
-  padding: 2rem !important;
-}
-
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -1313,6 +1309,11 @@ header {
   }
   h1 {
     text-transform: uppercase;
+  }
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 3.5rem;
+    }
   }
   .skills {
     display: flex;
