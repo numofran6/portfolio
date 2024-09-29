@@ -267,6 +267,8 @@ header {
 		display: flex;
 		align-items: center;
 		padding: 2rem;
+
+		@apply px-5 py-8 md:px-8;
 	}
 
 	h1 {
